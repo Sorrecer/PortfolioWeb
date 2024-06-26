@@ -1,0 +1,485 @@
+.noto-sans-bold {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* Regular */
+.noto-sans-regular {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* Thin */
+.noto-sans-thin {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.noto-sans-title {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700; /* Berat font tebal untuk judul */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.noto-sans-paragraph {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400; /* Berat font reguler untuk paragraf */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  text-align: justify;
+}
+
+body {
+  background-image: url("src/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #e5e7eb; /* Light text color for dark background */
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+  font-family: "Gram Bold", Arial, sans-serif;
+}
+
+/* Sections */
+section {
+  background-color: rgba(
+    34,
+    34,
+    34,
+    0.9
+  ); /* Dark semi-transparent background */
+  color: #e5e7eb; /* Light text for readability */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px auto; /* Center sections */
+  width: 90%;
+  max-width: 1200px; /* Limit width */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow for dark theme */
+}
+
+/* Header */
+header {
+  background-color: rgba(
+    34,
+    34,
+    34,
+    0.2
+  ); /* Dark semi-transparent background */
+  color: #e5e7eb; /* Light text color */
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1); /* Deeper shadow */
+}
+
+header h1 {
+  margin: 0 0 10px 0; /* Adds a 10px gap below the heading */
+  font-size: 2em;
+  font-family: "Gram Bold", Arial, sans-serif; /* Use custom font */
+}
+
+nav a {
+  margin: 0 10px; /* Adjust the value for horizontal spacing */
+  text-decoration: none;
+  color: #e5e7eb;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(
+    34,
+    34,
+    34,
+    0.1
+  ); /* Dark semi-transparent background */
+  color: #e5e7eb; /* Light text color */
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+  text-align: center;
+  margin: auto;
+}
+
+/* Section Headings */
+section h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  font-family: Arial, sans-serif; /* Use custom font */
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  /* background-color: rgba(0, 0, 0, 0);  */
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2); /* Dark semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about-image {
+  margin-right: 50px; /* Adjust spacing as needed */
+}
+
+.about-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensures the image fits well within the circle */
+  border: 3px solid #ffffff;
+}
+
+.about-text {
+  max-width: 600px;
+  margin: 40px;
+}
+
+/* Sections */
+section {
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  color: #e5e7eb; /* Light text for readability */
+  padding: 20px;
+  border-radius: 30px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow for dark theme */
+}
+
+/* Projects */
+.project-list {
+  display: flex;
+  flex-direction: column; /* Default to column layout */
+  gap: 1em;
+}
+
+.project-card {
+  background-color: rgba(
+    34,
+    34,
+    34,
+    0.1
+  ); /* Dark semi-transparent background */
+  padding: 1em;
+  border-radius: 8px;
+  flex: 1 1 auto; /* Allow cards to grow and shrink */
+  box-sizing: border-box;
+  color: #e5e7eb; /* Light text color */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+}
+
+/* Media Query for Two Columns Layout */
+@media (min-width: 768px) {
+  .project-list {
+    flex-direction: row; /* Change to row layout */
+    flex-wrap: wrap; /* Allow wrapping */
+  }
+
+  .project-card {
+    flex: 1 1 calc(50% - 1em); /* Two columns */
+  }
+}
+
+/* Animation */
+@keyframes slideFromDownAndFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-from-down-and-fade-2 {
+  animation: slideFromDownAndFade 2s ease-in-out;
+}
+
+.prose {
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.prose-zinc {
+  color: #e5e7eb; /* Light zinc color for dark background */
+}
+
+.dark .prose-invert {
+  color: #d1d5db; /* Inverted zinc color for dark mode */
+}
+
+/* tombol ai chat  */
+.cta {
+  position: fixed; /* Position fixed to keep it in view */
+  left: 0; /* Align with the left edge of the viewport */
+  bottom: 20px; /* Adjust as needed for vertical position */
+  z-index: 999; /* Ensure it's above other content */
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #ffffff;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #c7e2ef;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+/* Apply hover effect */
+.hovered:before {
+  width: 100%;
+  background: #c7e2ef;
+}
+
+.hovered svg {
+  transform: translateX(0);
+}
+
+/* Chat Widget */
+#chat-widget {
+  position: fixed;
+  top: 0;
+  left: -350px; /* Initially off-screen from the left */
+  bottom: 0;
+  width: 350px;
+  background-color: rgba(42, 42, 42, 0.8);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  transition: left 0.3s ease-in-out; /* Transition on left property */
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* When visible */
+#chat-widget.visible {
+  left: 0; /* Slide in from the left */
+}
+
+/* Chat Header */
+#chat-header {
+  background-color: #545454;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-right-radius: 5px;
+}
+
+#close-chat {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Chat Body */
+#chat-body {
+  height: 100%; /* Full height of parent container */
+  overflow-y: auto; /* Scrollable if content exceeds height */
+  padding: 10px;
+  color: #e5e7eb;
+}
+
+@keyframes cta {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* More Information Section */
+.more-info-section {
+  background-color: rgba(0, 0, 0, 0.4); /* Dark semi-transparent background */
+  color: #e5e7eb;
+  padding: 20px; /* Spacing inside the section */
+  text-align: center;
+  margin: 20px auto;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer; /* Pointer cursor for clickable element */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* CTA Animation on Hover */
+.more-info-section:hover {
+  animation: cta 0.6s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.9); /* Slightly darker on hover */
+  color: aqua;
+}
+
+.input-container {
+  display: flex; /* Use flexbox for horizontal alignment */
+  align-items: center;
+}
+
+/* Loader Styles */
+.loader {
+  text-align: center;
+}
+.loader span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  margin: 2px;
+  background: grey;
+  border-radius: 50%;
+  animation: loader 0.5s infinite alternate;
+}
+.loader span:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+.loader span:nth-of-type(3) {
+  animation-delay: 0.3s;
+}
+@keyframes loader {
+  0% {
+    height: 10px;
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(-11px);
+  }
+}
+
+/* Chatbox Styles */
+#chatbox {
+  height: 80%;
+  overflow-y: auto;
+  background-color: #2c2c2c;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Chat Bubble Styles */
+.chat-bubble {
+  max-width: 75%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  word-wrap: break-word;
+  clear: both;
+}
+
+.user-bubble {
+  float: right;
+  background-color: #6200ea;
+  color: #ffffff;
+  border-bottom-right-radius: 0px;
+}
+
+.bot-bubble {
+  float: left;
+  background-color: #333;
+  color: #e0e0e0;
+  border-bottom-left-radius: 0px;
+}
+
+/* Additional Styling */
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #1e1e1e;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#user-input {
+  width: calc(100% - 80px);
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+#send-button {
+  width: 60px;
+  padding: 10px;
+  background: #6200ea;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#send-button:hover {
+  background: #3700b3;
+}
