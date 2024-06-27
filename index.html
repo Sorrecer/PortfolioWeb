@@ -1,0 +1,118 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Kenny Anaga Portfolio</h1>
+      <nav>
+        <a class="noto-sans-title" href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+      </nav>
+    </header>
+
+    <section
+      id="about-section"
+      class="about-section prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+    >
+      <div class="about-image jello">
+        <img src="src/photo.jpg" alt="Your Photo" />
+      </div>
+      <div class="about-text noto-sans-paragraph">
+        <h2 style="font-size: 30px">About Me</h2>
+        <p>
+          Hi! my name is Kenny. As an IT enthusiast, I concentrate on various
+          <strong>technology-related projects</strong>, with a primary focus on
+          <strong>Artificial Intelligence and Web Development</strong>.
+        </p>
+        <p ;>
+          Apart from IT, I engage in hobbies such as chess, fishing, and gaming,
+          which provide balance and inspiration.
+        </p>
+      </div>
+    </section>
+
+    <section
+      id="projects"
+      class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+    >
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project-card">
+          <h3>Project 1</h3>
+          <p>Description of project 1.</p>
+        </div>
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <p>Description of project 2.</p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="experience"
+      class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+    >
+      <h2>Experience, Honors, and Awards</h2>
+      <ul>
+        <li>Experience 1: Description of experience 1.</li>
+        <li>Honor 1: Description of honor 1.</li>
+        <li>Award 1: Description of award 1.</li>
+      </ul>
+    </section>
+
+    <!-- more info -->
+    <section id="more-info" class="more-info-section noto-sans-bold">
+      <p>
+        Need more details or have questions? Chat with my AI assistant for
+        instant help!
+      </p>
+    </section>
+
+    <footer
+      class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+    >
+      <p>© 2024 Kenny Anaga</p>
+    </footer>
+
+    <button class="cta">
+      <span>AI Chatbot</span>
+      <svg width="15px" height="10px" viewBox="0 0 13 10">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+    </button>
+
+    <!-- chat Widget -->
+    <div id="chat-widget" class="hidden">
+      <div id="chat-header" class="noto-sans-bold">
+        <span>AI Chatbot</span>
+        <button id="close-chat">&times;</button>
+      </div>
+      <div id="chatbox" class="noto-sans-bold"></div>
+      <div class="input-container noto-sans-bold">
+        <input type="text" id="user-input" placeholder="Ask me anything!" />
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      src = "chatscript.js";
+    </script>
+  </body>
+</html>
