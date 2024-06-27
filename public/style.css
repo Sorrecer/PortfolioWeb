@@ -378,6 +378,8 @@ section {
 .input-container {
   display: flex; /* Use flexbox for horizontal alignment */
   align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Loader Styles */
@@ -412,7 +414,8 @@ section {
   }
 }
 
-/* Chatbox Styles */
+/* chatbox */
+
 #chatbox {
   height: 80%;
   overflow-y: auto;
@@ -420,9 +423,10 @@ section {
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column-reverse; /* Make chat start from bottom */
 }
 
-/* Chat Bubble Styles */
 .chat-bubble {
   max-width: 75%;
   padding: 10px;
@@ -430,20 +434,32 @@ section {
   border-radius: 10px;
   word-wrap: break-word;
   clear: both;
+  animation: slideUp 0.3s ease-in-out; /* Add slide up animation */
 }
 
 .user-bubble {
-  float: right;
+  align-self: flex-end;
   background-color: #6200ea;
   color: #ffffff;
   border-bottom-right-radius: 0px;
 }
 
 .bot-bubble {
-  float: left;
+  align-self: flex-start;
   background-color: #333;
   color: #e0e0e0;
   border-bottom-left-radius: 0px;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Additional Styling */
