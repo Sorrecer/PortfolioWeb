@@ -1,13 +1,14 @@
 {
-  "name": "porto-web",
+  "name": "portofolioweb",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portfolio website with AI chatbot",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kenny Anaga",
   "license": "ISC",
   "dependencies": {
     "@google/generative-ai": "^0.13.0",
