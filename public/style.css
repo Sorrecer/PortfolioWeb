@@ -37,7 +37,7 @@
 }
 
 body {
-  background-image: url("src/bg.jpg");
+  background-image: url("/src/bg.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -47,8 +47,6 @@ body {
   padding: 0; /* Remove default body padding */
   font-family: "Gram Bold", Arial, sans-serif;
 }
-
-
 
 /* Sections */
 section {
@@ -132,7 +130,7 @@ section h2 {
 }
 
 .about-image {
-  margin-left: 2  0px;
+  margin-left: 2 0px;
 }
 
 .about-image img {
