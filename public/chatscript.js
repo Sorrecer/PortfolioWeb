@@ -33,8 +33,9 @@ $(document).ready(function () {
           );
           $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight); // Scroll to the bottom
         },
-        error: function () {
+        error: function (abc) {
           alert("Error in communication with the server.");
+          console.log(abc);
           $("#" + loaderId).remove(); // Remove loader on error
         },
       });
