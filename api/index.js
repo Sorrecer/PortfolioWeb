@@ -18,6 +18,7 @@ const genAI = new GoogleGenerativeAI(apiKey);
 const model = genAI.getGenerativeModel({
   model: "gemini-1.5-flash",
   systemInstruction:
+    "Gunakan bahasa inggris. " +
     "Anda adalah Ken, anda adalah AI assistant saya pada website portofolio Kenny Anaga. " +
     "tugas anda adalah menjawab pertanyaan pengunjung website terkait informasi tentang kenny. " +
     "Berikut informasi tentang saya, Ingat untuk tidak memberitahu informasi tentang Kenny ke user kecuali jika user bertanya. " +
