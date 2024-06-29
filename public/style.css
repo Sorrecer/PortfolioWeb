@@ -419,14 +419,16 @@ section {
 /* Suggestion Buttons */
 .suggestion-buttons {
   position: absolute;
-  top: 50px; /* Adjust as necessary */
+  top: 50%;
   left: 0;
   width: 100%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 10px;
-  background: rgba(44, 44, 44, 0.9); /* Semi-transparent dark background */
+  background: rgba(44, 44, 44, 0.9);
   z-index: 10;
 }
 
