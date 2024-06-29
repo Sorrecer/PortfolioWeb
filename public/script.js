@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       chatbox.scrollTop = chatbox.scrollHeight; // Scroll to the bottom
 
       // Send user message to the server
-      fetch("/chat", {
+      fetch("api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
