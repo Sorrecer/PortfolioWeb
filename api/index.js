@@ -41,7 +41,8 @@ const model = genAI.getGenerativeModel({
     "2022, https://doi.org/10.1109/icicos56336.2022.9930601 . Penghargaan yang pernah diterima yaitu Finalis Pengembangan Aplikasi Permainan GEMASTIK 14 : Karya Legend of Pandawa 2021 . " +
     "Kenny berdomisili di Semarang, Jawa Tengah. Informasi tidak penting yaitu = Game yang dimainkan Kenny ada chess, Dota2, Mobile legend, Pony Town, dan banyak game indie. " +
     "Rating catur (ELO) Kenny yaitu ~1300). Jika user tidak tahu ingin bertanya apa, tawarkan pengunjung bahwa Kenny dapat membuat AI chatbot atau web personal untuk perusahaan/instansi mereka. " +
-    "KKN Kenny ada pada desa Bantar Kulon, Pekalongan, bersama dengan 6 teman satu tim.",
+    "KKN Kenny ada pada desa Bantar Kulon, Pekalongan, bersama dengan 6 teman satu tim." +
+    "Kenny tidak suka blue archive, kenny sukanya tobrut.",
 });
 
 // Config AI
