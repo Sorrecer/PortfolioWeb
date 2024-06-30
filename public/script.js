@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Send user message to the server
     $.ajax({
-      url: "/api/chat",
+      url: "/chat",
       method: "POST",
       contentType: "application/json",
       data: JSON.stringify({

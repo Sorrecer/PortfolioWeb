@@ -61,44 +61,62 @@ const saveUserInfo = (name, email) => {
   fs.appendFileSync(filePath, data);
 };
 
-// Handle API requests
+// Endpoint untuk chat
 app.post("/api/chat", async (req, res) => {
   const { message, userName, userEmail } = req.body;
 
-  if (!userName || !userEmail) {
-    return res.status(400).json({ error: "Nama dan email harus diisi." });
+  // Validasi input
+  if (!message || !userName || !userEmail) {
+    console.log("Validation error: Name, email, and message are required.");
+    return res
+      .status(400)
+      .json({ error: "Name, email, and message are required." });
   }
 
-  try {
-    // Save user info if not already saved
-    if (!isUserExist(userEmail)) {
-      saveUserInfo(userName, userEmail);
-    }
+  console.log(
+    `Received input: Name - ${userName}, Email - ${userEmail}, Message - ${message}`
+  );
 
+  const userInput = message; // Akses pesan dari request body
+
+  // Buat string data untuk disimpan
+  const userString = `${userName},${userEmail}\n`;
+  const dataString = `${userName},${userEmail},${userInput}\n`;
+
+  // Tulis data ke userinfo.txt jika belum ada
+  const userFilePath = path.join(__dirname, "userinfo.txt");
+  if (!isUserExist(userEmail)) {
+    fs.appendFile(userFilePath, userString, (err) => {
+      if (err) {
+        console.error("Error writing to userinfo.txt:", err);
+        return res.status(500).json({ error: "Failed to save user info." });
+      }
+      console.log("User info saved:", userString);
+    });
+  }
+
+  // Tulis data ke storage.txt
+  const messageFilePath = path.join(__dirname, "storage.txt");
+  fs.appendFile(messageFilePath, dataString, (err) => {
+    if (err) {
+      console.error("Error writing to storage.txt:", err);
+      return res.status(500).json({ error: "Failed to save message." });
+    }
+    console.log("Message saved:", dataString);
+  });
+
+  try {
     const chatSession = model.startChat({
-      generationConfig: {
-        temperature: 0.5,
-        topP: 0.95,
-        topK: 64,
-        maxOutputTokens: 8192,
-        responseMimeType: "text/plain",
-      },
-      history: [
-        {
-          role: "user",
-          parts: [
-            {
-              text: message,
-            },
-          ],
-        },
-      ],
+      generationConfig,
+      history: [],
     });
 
-    const result = await chatSession.sendMessage(message);
+    const result = await chatSession.sendMessage(userInput);
+    console.log("AI response:", result.response.text());
     res.json({ response: result.response.text() });
   } catch (error) {
-    res.status(500).send(error.toString());
+    console.error("Error in communication with the AI:", error);
+    res.status(500).json({ error: "Failed to communicate with the AI." });
   }
 });
 
