@@ -44,6 +44,15 @@ const model = genAI.getGenerativeModel({
     "KKN Kenny ada pada desa Bantar Kulon, Pekalongan, bersama dengan 6 teman satu tim.",
 });
 
+// Config AI
+const generationConfig = {
+  temperature: 0.5,
+  topP: 0.95,
+  topK: 64,
+  maxOutputTokens: 8192,
+  responseMimeType: "text/plain",
+};
+
 // Helper function to check if user exists in userinfo.txt
 const isUserExist = (email) => {
   const filePath = path.join(__dirname, "userinfo.txt");
