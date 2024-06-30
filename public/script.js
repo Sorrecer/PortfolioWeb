@@ -116,8 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
         chatbox.appendChild(botBubble);
         chatbox.scrollTop = chatbox.scrollHeight;
       },
-      error: function () {
+      error: function (eror) {
         alert("Error in communication with the server.");
+        console.log(eror);
         document.getElementById(loaderId).remove();
       },
     });
