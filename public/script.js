@@ -23,26 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Handle user info submission
   submitInfoButton.addEventListener("click", () => {
-    const userName = userNameInput.value.trim();
-    const userEmail = userEmailInput.value.trim();
-
-    if (userName && userEmail) {
-      // Save user info to localStorage
-      localStorage.setItem("userName", userName);
-      localStorage.setItem("userEmail", userEmail);
-
-      // Hide the user info form
-      userInfoForm.style.display = "none";
-      suggestionButtons.style.display = "flex"; // Show suggestion buttons
-    } else if (userName) {
-      localStorage.setItem("userName", userName);
-      // Hide the user info form
-      userInfoForm.style.display = "none";
-      suggestionButtons.style.display = "flex"; // Show suggestion buttons
-    } else {
-      alert("Silakan isi nama anda.");
-    }
+    submitUserInfo();
   });
+
+  // Handle form submission with Enter key
+  userNameInput.addEventListener("keypress", handleEnterKeySubmit);
+  userEmailInput.addEventListener("keypress", handleEnterKeySubmit);
 
   // Handle suggestion button click
   suggestionButtons.addEventListener("click", (e) => {
@@ -63,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Handle enter key press for sending message
   userInput.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
+      event.preventDefault(); // Prevent form submission if within a form
       const message = userInput.value.trim();
       if (message) {
         sendMessage(message);
@@ -70,7 +57,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Send message function
+  function handleEnterKeySubmit(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      submitUserInfo();
+    }
+  }
+
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function submitUserInfo() {
+    const userName = userNameInput.value.trim();
+    const userEmail = userEmailInput.value.trim();
+
+    if (userName && (!userEmail || validateEmail(userEmail))) {
+      // Save user info to localStorage
+      localStorage.setItem("userName", userName);
+      if (userEmail) {
+        localStorage.setItem("userEmail", userEmail);
+      }
+
+      // Hide the user info form and show suggestion buttons
+      userInfoForm.style.display = "none";
+      suggestionButtons.style.display = "flex";
+    } else {
+      alert("Silakan isi nama anda dan email yang valid.");
+    }
+  }
+
   function sendMessage(message) {
     const userName = localStorage.getItem("userName");
     const userEmail = localStorage.getItem("userEmail");
@@ -121,9 +138,9 @@ document.addEventListener("DOMContentLoaded", function () {
         chatbox.appendChild(botBubble);
         chatbox.scrollTop = chatbox.scrollHeight;
       },
-      error: function (eror) {
+      error: function (error) {
         alert("Error in communication with the server.");
-        console.log(eror);
+        console.log(error);
         document.getElementById(loaderId).remove();
       },
     });

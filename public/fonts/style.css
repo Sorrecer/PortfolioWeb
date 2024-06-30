@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Gram';
-    src: local('Gram bold'), local('Gram-bold'),
-        url('Grambold.woff2') format('woff2'),
-        url('Grambold.woff') format('woff'),
-        url('Grambold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-  }

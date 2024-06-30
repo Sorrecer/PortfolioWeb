@@ -1,22 +1,23 @@
 $(document).ready(function () {
   function sendMessage() {
-    var message = $("#user-input").val();
-    if (message.trim() !== "") {
-      // Menambahkan chat user ke chatbox
+    var message = $("#user-input").val().trim(); // Trimmed message
+    if (message !== "") {
+      // Add user message to chatbox
       $("#chatbox").append(
-        `<div class="chat-bubble user-bubble">${message}</div>` // dibungkus chat bubble
+        `<div class="chat-bubble user-bubble">${message}</div>`
       );
-      $("#user-input").val(""); // clear input field
+      $("#user-input").val(""); // Clear input field
       $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight); // Scroll to the bottom
 
       // Append loading animation
       var loaderId = "loader-" + new Date().getTime(); // Unique ID for loader
-      $("#chatbox")
-        .append(`<div class="chat-bubble bot-bubble" id="${loaderId}">
-                  <div class="loader">
-                      <span></span><span></span><span></span>
-                  </div>
-              </div>`);
+      $("#chatbox").append(
+        `<div class="chat-bubble bot-bubble" id="${loaderId}">
+           <div class="loader">
+             <span></span><span></span><span></span>
+           </div>
+         </div>`
+      );
       $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight); // Scroll to the bottom
 
       // Send user message to the server
@@ -33,9 +34,11 @@ $(document).ready(function () {
           );
           $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight); // Scroll to the bottom
         },
-        error: function (abc) {
-          alert("Error in communication with the server.");
-          console.log(abc);
+        error: function (error) {
+          alert(
+            "Error in communication with the server. Please try again later."
+          );
+          console.log(error);
           $("#" + loaderId).remove(); // Remove loader on error
         },
       });
@@ -47,11 +50,10 @@ $(document).ready(function () {
     sendMessage();
   });
 
-  // Event listener for enter
+  // Event listener for enter key
   $("#user-input").keypress(function (event) {
     if (event.which === 13) {
-      // 13 is the key code for enter
-      event.preventDefault(); // Prevent the default action
+      event.preventDefault(); // Prevent form submission
       sendMessage();
     }
   });

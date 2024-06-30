@@ -8,7 +8,11 @@
     "dev": "vercel dev",
     "build": "vercel build"
   },
-  "keywords": [],
+  "keywords": [
+    "portfolio",
+    "AI chatbot",
+    "JavaScript"
+  ],
   "author": "Kenny Anaga",
   "license": "ISC",
   "dependencies": {

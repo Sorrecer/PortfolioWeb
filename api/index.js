@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
-const fs = require("fs");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // Initialize express
@@ -59,7 +58,7 @@ app.post("/api/chat", async (req, res) => {
   const { message, userName, userEmail } = req.body;
 
   // Validasi input
-  if (!message || !userName || !userEmail) {
+  if (!message || !userName) {
     console.log("Validation error: Name, email, and message are required.");
     return res
       .status(400)
