@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 // kirim pesan user, lalu tunggu dan mengirim respon bot
-app.post("/chat", async (req, res) => {
+app.post("/api/chat", async (req, res) => {
   const userInput = req.body.message;
   try {
     const chatSession = model.startChat({
