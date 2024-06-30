@@ -10,7 +10,7 @@ const app = express();
 
 // Middlewares
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "..", "public")));
+app.use(express.static(path.join(__dirname, "..", "public"))); // Menyajikan file statis dari direktori public
 
 // Configure Google Generative AI
 const apiKey = process.env.GEMINI_API_KEY;
@@ -43,6 +43,16 @@ const model = genAI.getGenerativeModel({
     "Rating catur (ELO) Kenny yaitu ~1300). Jika user tidak tahu ingin bertanya apa, tawarkan pengunjung bahwa Kenny dapat membuat AI chatbot atau web personal untuk perusahaan/instansi mereka. " +
     "KKN Kenny ada pada desa Bantar Kulon, Pekalongan, bersama dengan 6 teman satu tim.",
 });
+
+// Helper function to check if user exists in userinfo.txt
+const isUserExist = (email) => {
+  const filePath = path.join(__dirname, "userinfo.txt");
+  if (fs.existsSync(filePath)) {
+    const users = fs.readFileSync(filePath, "utf-8").split("\n");
+    return users.some((line) => line.split(",")[1] === email);
+  }
+  return false;
+};
 
 // Helper function to save user info
 const saveUserInfo = (name, email) => {
