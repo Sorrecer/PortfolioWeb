@@ -34,8 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // Hide the user info form
       userInfoForm.style.display = "none";
       suggestionButtons.style.display = "flex"; // Show suggestion buttons
+    } else if (userName) {
+      localStorage.setItem("userName", userName);
+      // Hide the user info form
+      userInfoForm.style.display = "none";
+      suggestionButtons.style.display = "flex"; // Show suggestion buttons
     } else {
-      alert("Silakan isi nama dan email Anda.");
+      alert("Silakan isi nama anda.");
     }
   });
 
@@ -70,8 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const userName = localStorage.getItem("userName");
     const userEmail = localStorage.getItem("userEmail");
 
-    if (!userName || !userEmail) {
-      alert("Silakan isi nama dan email Anda sebelum mengirim pesan.");
+    if (!userName) {
+      alert("Silakan isi nama anda sebelum mengirim pesan.");
       return;
     }
 
