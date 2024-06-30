@@ -5,3 +5,4 @@ halo,ini,haloooo
 e,e,🧑 Who is Kenny Anaga?
 kenny,anaga24@gmail.com,halo
 kenny,anaga24@gmail.com,apa kabar
+2,2,🧑 Who is Kenny Anaga?
