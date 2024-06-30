@@ -2,3 +2,4 @@ tes,123,test
 kenny,anaga,📄 Tell me about Kenny's CV
 qq,q,🧑 Who is Kenny Anaga?
 halo,ini,haloooo
+e,e,🧑 Who is Kenny Anaga?
