@@ -53,23 +53,6 @@ const generationConfig = {
   responseMimeType: "text/plain",
 };
 
-// Helper function to check if user exists in userinfo.txt
-const isUserExist = (email) => {
-  const filePath = path.join(__dirname, "..", "userinfo.txt");
-  if (fs.existsSync(filePath)) {
-    const users = fs.readFileSync(filePath, "utf-8").split("\n");
-    return users.some((line) => line.split(",")[1] === email);
-  }
-  return false;
-};
-
-// Helper function to save user info
-const saveUserInfo = (name, email) => {
-  const filePath = path.join(__dirname, "..", "userinfo.txt");
-  const data = `${name},${email}\n`;
-  fs.appendFileSync(filePath, data);
-};
-
 // Endpoint untuk chat
 app.post("/api/chat", async (req, res) => {
   const { message, userName, userEmail } = req.body;
@@ -92,27 +75,8 @@ app.post("/api/chat", async (req, res) => {
   const userString = `${userName},${userEmail}\n`;
   const dataString = `${userName},${userEmail},${userInput}\n`;
 
-  // Tulis data ke userinfo.txt jika belum ada
-  const userFilePath = path.join(__dirname, "..", "userinfo.txt");
-  if (!isUserExist(userEmail)) {
-    fs.appendFile(userFilePath, userString, (err) => {
-      if (err) {
-        console.error("Error writing to userinfo.txt:", err);
-        return res.status(500).json({ error: "Failed to save user info." });
-      }
-      console.log("User info saved:", userString);
-    });
-  }
-
-  // Tulis data ke storage.txt
-  const messageFilePath = path.join(__dirname, "..", "storage.txt");
-  fs.appendFile(messageFilePath, dataString, (err) => {
-    if (err) {
-      console.error("Error writing to storage.txt:", err);
-      return res.status(500).json({ error: "Failed to save message." });
-    }
-    console.log("Message saved:", dataString);
-  });
+  console.log("User info saved:", userString);
+  console.log("Message saved:", dataString);
 
   try {
     const chatSession = model.startChat({
