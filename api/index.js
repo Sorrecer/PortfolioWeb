@@ -53,6 +53,11 @@ const generationConfig = {
   responseMimeType: "text/plain",
 };
 
+const chatSession = model.startChat({
+  generationConfig,
+  history: [],
+});
+
 // Endpoint untuk chat
 app.post("/api/chat", async (req, res) => {
   const { message, userName, userEmail } = req.body;
@@ -79,11 +84,6 @@ app.post("/api/chat", async (req, res) => {
   console.log("Message saved:", dataString);
 
   try {
-    const chatSession = model.startChat({
-      generationConfig,
-      history: [],
-    });
-
     const result = await chatSession.sendMessage(userInput);
     console.log("AI response:", result.response.text());
     res.json({ response: result.response.text() });
