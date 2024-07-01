@@ -1,24 +1,40 @@
 document.addEventListener("DOMContentLoaded", function () {
   const chatWidget = document.getElementById("chat-widget");
   const ctaButton = document.querySelector(".cta");
+  const closeChatButton = document.getElementById("close-chat");
   const suggestionButtons = document.getElementById("suggestion-buttons");
+  const userInfoForm = document.getElementById("user-info-form");
+  const userNameInput = document.getElementById("user-name");
+  const userEmailInput = document.getElementById("user-email");
+  const submitInfoButton = document.getElementById("submit-info");
   const chatbox = document.getElementById("chatbox");
   const sendButton = document.getElementById("send-button");
   const userInput = document.getElementById("user-input");
 
   // Toggle chat widget visibility when CTA button is clicked
-  if (ctaButton) {
-    ctaButton.addEventListener("click", () => {
-      chatWidget.classList.toggle("visible");
-    });
-  }
+  ctaButton.addEventListener("click", () => {
+    chatWidget.classList.toggle("visible");
+  });
+
+  // Hide chat widget when close button is clicked
+  closeChatButton.addEventListener("click", () => {
+    chatWidget.classList.remove("visible");
+  });
+
+  // Handle user info submission
+  submitInfoButton.addEventListener("click", () => {
+    submitUserInfo();
+  });
+
+  // Handle form submission with Enter key
+  userNameInput.addEventListener("keypress", handleEnterKeySubmit);
+  userEmailInput.addEventListener("keypress", handleEnterKeySubmit);
 
   // Handle suggestion button click
   suggestionButtons.addEventListener("click", (e) => {
     if (e.target.classList.contains("suggestion-button")) {
       const message = e.target.textContent.trim();
       sendMessage(message);
-      suggestionButtons.style.display = "none"; // Hide buttons after click
     }
   });
 
@@ -41,7 +57,46 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  function handleEnterKeySubmit(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      submitUserInfo();
+    }
+  }
+
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function submitUserInfo() {
+    const userName = userNameInput.value.trim();
+    const userEmail = userEmailInput.value.trim();
+
+    if (userName && (!userEmail || validateEmail(userEmail))) {
+      // Save user info to localStorage
+      localStorage.setItem("userName", userName);
+      if (userEmail) {
+        localStorage.setItem("userEmail", userEmail);
+      }
+
+      // Hide the user info form and show suggestion buttons
+      userInfoForm.style.display = "none";
+      suggestionButtons.style.display = "flex";
+    } else {
+      alert("Silakan isi nama anda dan email yang valid.");
+    }
+  }
+
   function sendMessage(message) {
+    const userName = localStorage.getItem("userName");
+    const userEmail = localStorage.getItem("userEmail");
+
+    if (!userName) {
+      alert("Silakan isi nama anda sebelum mengirim pesan.");
+      return;
+    }
+
     // Add user message to chatbox
     const userBubble = document.createElement("div");
     userBubble.classList.add("chat-bubble", "user-bubble");
@@ -66,10 +121,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Send user message to the server
     $.ajax({
-      url: "/chat",
+      url: "/api/chat",
       method: "POST",
       contentType: "application/json",
-      data: JSON.stringify({ message }),
+      data: JSON.stringify({
+        message: message,
+        userName: userName,
+        userEmail: userEmail,
+      }),
       success: function (response) {
         // Remove loader and append bot response
         document.getElementById(loaderId).remove();
@@ -81,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       error: function (error) {
         alert("Error in communication with the server.");
-        console.error(error);
+        console.log(error);
         document.getElementById(loaderId).remove();
       },
     });

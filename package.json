@@ -1,8 +1,18 @@
 {
-  "name": "confessyoursins",
+  "name": "portofolioweb",
   "version": "1.0.0",
-  "description": "web app to confess your sins",
-  "main": "localtesting.js",
+  "description": "Portfolio website with AI chatbot",
+  "main": "index.js",
+  "scripts": {
+    "start": "vercel dev",
+    "dev": "vercel dev",
+    "build": "vercel build"
+  },
+  "keywords": [
+    "portfolio",
+    "AI chatbot",
+    "JavaScript"
+  ],
   "author": "Kenny Anaga",
   "license": "ISC",
   "dependencies": {
