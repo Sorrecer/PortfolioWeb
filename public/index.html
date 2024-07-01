@@ -1,43 +1,140 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Confess Your Sins</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   </head>
   <body>
+    <header>
+      <h1>Kenny Anaga Portfolio</h1>
+      <nav>
+        <a class="noto-sans-title" href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+      </nav>
+    </header>
+
+    <section
+      id="about-section"
+      class="about-section prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+    >
+      <div class="about-image jello">
+        <img src="/photo.jpg" alt="Your Photo" />
+      </div>
+      <div class="about-text noto-sans-paragraph">
+        <h2 style="font-size: 30px">About Me</h2>
+        <p>
+          Hi! my name is Kenny Niaga. As an IT enthusiast, I concentrate on
+          various
+          <strong>technology-related projects</strong>, with a primary focus on
+          <strong>Artificial Intelligence and Web Development</strong>.
+        </p>
+        <p ;>
+          Apart from IT, I engage in hobbies such as chess, fishing, and gaming,
+          which provide balance and inspiration.
+        </p>
+      </div>
+    </section>
+
+    <section
+      id="projects"
+      class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+    >
+      <h2>Projects</h2>
+      <div class="project-list">
+        <div class="project-card">
+          <h3>Project 1</h3>
+          <p>Description of project 1.</p>
+        </div>
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <p>Description of project 2.</p>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="experience"
+      class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+    >
+      <h2>Experience, Honors, and Awards</h2>
+      <ul>
+        <li>Experience 1: Description of experience 1.</li>
+        <li>Honor 1: Description of honor 1.</li>
+        <li>Award 1: Description of award 1.</li>
+      </ul>
+    </section>
+
+    <!-- more info -->
+    <section id="more-info" class="more-info-section noto-sans-bold">
+      <p>
+        Oops! The author hasn't finished the site yet ¯\_(ツ)_/¯
+        <!-- Need more details or have questions? Chat with my AI assistant for
+        instant help! -->
+      </p>
+      <p>👈 Feel free to ask the AI</p>
+    </section>
+
+    <footer
+      class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+    >
+      <p>© 2024 Kenny Anaga</p>
+    </footer>
+
+    <button class="cta">
+      <span>AI Chatbot</span>
+      <svg width="15px" height="10px" viewBox="0 0 13 10">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+    </button>
+
     <!-- Chat Widget -->
     <div id="chat-widget" class="hidden">
       <div id="chat-header" class="noto-sans-bold">
-        <img src="prayer-icon.png" alt="Prayer Icon" class="prayer-icon" />
-        <span>Confess Your Sins</span>
+        <span>AI Chatbot</span>
+        <button id="close-chat">&times;</button>
+      </div>
+
+      <!-- User Info Form -->
+      <div id="user-info-form" class="user-info-form">
+        <input type="text" id="user-name" placeholder="Name" />
+        <input type="email" id="user-email" placeholder="Email (Optional)" />
+        <button id="submit-info">Start Chat</button>
       </div>
 
       <!-- Suggestion Buttons -->
       <div id="suggestion-buttons" class="suggestion-buttons">
         <button class="suggestion-button noto-sans-bold">
-          I used my phone during a meeting
+          <span class="emoji">🧑</span> Who is Kenny Anaga?
         </button>
         <button class="suggestion-button noto-sans-bold">
-          I secretly took the last slice of pizza and blamed it on the dog
+          <span class="emoji">📄</span> Tell me about Kenny's CV
         </button>
         <button class="suggestion-button noto-sans-bold">
-          I let autocorrect take the blame for my typos in text messages
+          <span class="emoji">📝</span> Kenny's projects
         </button>
       </div>
 
       <div id="chatbox" class="noto-sans-bold"></div>
       <div class="input-container noto-sans-bold">
-        <input
-          type="text"
-          id="user-input"
-          placeholder="Confess Your Sins Here.."
-        />
+        <input type="text" id="user-input" placeholder="Ask me anything!" />
         <button id="send-button">Send</button>
       </div>
     </div>
+
     <script src="script.js"></script>
     <script src="chatscript.js"></script>
   </body>
