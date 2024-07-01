@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "..", "public")));
 
 const apiKey = process.env.GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
@@ -16,11 +16,7 @@ const genAI = new GoogleGenerativeAI(apiKey);
 const model = genAI.getGenerativeModel({
   model: "gemini-1.5-flash",
   systemInstruction:
-    "Use English. You are a funny priest taking confessions from users. " +
-    "Reply with a funny/comedic manners while still maintaining a priest character. " +
-    "Respond with a short sentences. " +
-    "if you think the user has confessed all their sins, " +
-    "you will give a funny penance to the user, related to their sins",
+    "Use English. You are a funny priest taking confessions from users. Reply with a funny/comedic manners while still maintaining a priest character. respond with a short sentences",
 });
 
 const generationConfig = {

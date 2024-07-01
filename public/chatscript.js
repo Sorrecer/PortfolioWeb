@@ -1,59 +1,63 @@
 $(document).ready(function () {
   function sendMessage() {
-    var message = $("#user-input").val().trim(); // Trimmed message
-    if (message !== "") {
-      // Add user message to chatbox
-      $("#chatbox").append(
-        `<div class="chat-bubble user-bubble">${message}</div>`
-      );
+    const message = $("#user-input").val().trim();
+    if (message) {
+      appendMessage("user-bubble", message);
       $("#user-input").val(""); // Clear input field
-      $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight); // Scroll to the bottom
+      scrollToBottom();
 
-      // Append loading animation
-      var loaderId = "loader-" + new Date().getTime(); // Unique ID for loader
-      $("#chatbox").append(
-        `<div class="chat-bubble bot-bubble" id="${loaderId}">
-           <div class="loader">
-             <span></span><span></span><span></span>
-           </div>
-         </div>`
-      );
-      $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight); // Scroll to the bottom
+      const loaderId = appendLoader();
+      scrollToBottom();
 
-      // Send user message to the server
       $.ajax({
-        url: "/api/chat",
+        url: "/chat",
         method: "POST",
         contentType: "application/json",
-        data: JSON.stringify({ message: message }),
+        data: JSON.stringify({ message }),
         success: function (response) {
-          // Remove loader and append bot response
-          $("#" + loaderId).remove();
-          $("#chatbox").append(
-            `<div class="chat-bubble bot-bubble">${response.response}</div>`
-          );
-          $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight); // Scroll to the bottom
+          removeLoader(loaderId);
+          appendMessage("bot-bubble", response.response);
+          scrollToBottom();
         },
         error: function (error) {
-          alert(
-            "Error in communication with the server. Please try again later."
-          );
-          console.log(error);
-          $("#" + loaderId).remove(); // Remove loader on error
+          alert("Error communicating with the server. Please try again later.");
+          console.error(error);
+          removeLoader(loaderId);
         },
       });
     }
   }
 
-  // Event listener for send button
-  $("#send-button").click(function () {
-    sendMessage();
-  });
+  function appendMessage(className, message) {
+    $("#chatbox").append(
+      `<div class="chat-bubble ${className}">${message}</div>`
+    );
+  }
 
-  // Event listener for enter key
+  function appendLoader() {
+    const loaderId = "loader-" + Date.now();
+    $("#chatbox").append(
+      `<div class="chat-bubble bot-bubble" id="${loaderId}">
+         <div class="loader"><span></span><span></span><span></span></div>
+       </div>`
+    );
+    return loaderId;
+  }
+
+  function removeLoader(loaderId) {
+    $("#" + loaderId).remove();
+  }
+
+  function scrollToBottom() {
+    $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight);
+  }
+
+  // Event listeners
+  $("#send-button").click(sendMessage);
+
   $("#user-input").keypress(function (event) {
     if (event.which === 13) {
-      event.preventDefault(); // Prevent form submission
+      event.preventDefault();
       sendMessage();
     }
   });
