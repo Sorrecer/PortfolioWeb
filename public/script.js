@@ -21,6 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
     chatWidget.classList.remove("visible");
   });
 
+  // Hide chat widget when clicking outside
+  document.addEventListener("click", (event) => {
+    if (
+      chatWidget.classList.contains("visible") &&
+      !chatWidget.contains(event.target) &&
+      !ctaButton.contains(event.target)
+    ) {
+      chatWidget.classList.remove("visible");
+    }
+  });
+
   // Handle user info submission
   submitInfoButton.addEventListener("click", () => {
     submitUserInfo();

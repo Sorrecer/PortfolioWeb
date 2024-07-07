@@ -116,9 +116,30 @@ section h2 {
 .about-section {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-  /* background-color: rgba(0, 0, 0, 0);  */
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Adjust gap as needed */
+  width: 100%;
+  max-width: 1200px; /* Optionally set a max-width */
+}
+
+.about-image {
+  display: flex;
+  align-items: center; /* Vertically center the image */
+  justify-content: center; /* Center horizontally in its container */
+  margin: 10px;
+}
+
+.about-image img {
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Make height equal to width for circle */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the circle */
 }
 
 .about-content {
@@ -129,21 +150,32 @@ section h2 {
   border-radius: 10px;
 }
 
-.about-image {
-  margin-left: 2 0px;
-}
-
-.about-image img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover; /* Ensures the image fits well within the circle */
-  border: 3px solid #ffffff;
-}
-
 .about-text {
-  max-width: 600px;
-  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text h2 {
+  font-size: 30px;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image {
+    margin-bottom: 20px; /* Adjust spacing as needed */
+  }
+
+  .about-text {
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
 
 /* Sections */
@@ -166,6 +198,7 @@ section {
 }
 
 .project-card {
+  display: block; /* Make entire card clickable */
   background-color: rgba(
     34,
     34,
@@ -174,10 +207,35 @@ section {
   ); /* Dark semi-transparent background */
   padding: 1em;
   border-radius: 8px;
-  flex: 1 1 auto; /* Allow cards to grow and shrink */
   box-sizing: border-box;
   color: #e5e7eb; /* Light text color */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow */
+  text-decoration: none; /* Remove default link styles */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Center h2 in the projects section */
+#projects h2 {
+  text-align: center;
+  margin-bottom: 1em; /* Adjust spacing below the heading if needed */
+}
+
+/* Text within project cards */
+.project-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.project-card p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1rem;
+  color: #d1d5db; /* Slightly lighter text color */
+}
+
+/* Hover Effect */
+.project-card:hover {
+  box-shadow: 0 4px 8px rgba(124, 124, 124, 0.6); /* Stronger shadow on hover */
+  transform: translateY(-5px); /* Slight lift effect */
 }
 
 /* Media Query for Two Columns Layout */
@@ -185,10 +243,31 @@ section {
   .project-list {
     flex-direction: row; /* Change to row layout */
     flex-wrap: wrap; /* Allow wrapping */
+    gap: 1em; /* Ensure gap between rows and columns */
   }
 
   .project-card {
     flex: 1 1 calc(50% - 1em); /* Two columns */
+    margin-bottom: 1em; /* Margin to separate rows */
+  }
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .project-list {
+    gap: 0.75em; /* Slightly less gap on smaller screens */
+  }
+
+  .project-card {
+    padding: 0.75em;
+  }
+
+  .project-card h3 {
+    font-size: 1.125rem;
+  }
+
+  .project-card p {
+    font-size: 0.875rem;
   }
 }
 
