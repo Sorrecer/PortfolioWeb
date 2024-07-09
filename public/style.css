@@ -198,7 +198,8 @@ section {
 }
 
 .project-card {
-  display: block; /* Make entire card clickable */
+  display: flex;
+  align-items: center;
   background-color: rgba(
     34,
     34,
@@ -212,6 +213,62 @@ section {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow */
   text-decoration: none; /* Remove default link styles */
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-details {
+  flex: 1; /* Take remaining space */
+}
+
+.project-image {
+  margin-left: 1em; /* Adjust spacing between image and details */
+}
+
+.project-image img {
+  width: 80px; /* Adjust the width of the image */
+  height: 80px; /* Adjust the height of the image */
+  border-radius: 50%; /* Make the image circular */
+}
+
+.project-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+}
+
+.project-box {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2em;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 0.5s;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Center h2 in the projects section */

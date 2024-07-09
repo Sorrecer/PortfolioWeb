@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const chatbox = document.getElementById("chatbox");
   const sendButton = document.getElementById("send-button");
   const userInput = document.getElementById("user-input");
+  const projectOverlay = document.getElementById("project-overlay");
+  const closeProjectBox = document.getElementById("close-project-box");
+  const projectContent = document.getElementById("project-content");
 
   // Toggle chat widget visibility when CTA button is clicked
   ctaButton.addEventListener("click", () => {
@@ -21,13 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
     chatWidget.classList.remove("visible");
   });
 
-  // Hide chat widget when clicking outside
-  document.addEventListener("click", (event) => {
-    if (
-      chatWidget.classList.contains("visible") &&
-      !chatWidget.contains(event.target) &&
-      !ctaButton.contains(event.target)
-    ) {
+  // Close chat widget when clicking outside of it
+  document.addEventListener("click", (e) => {
+    if (!chatWidget.contains(e.target) && !ctaButton.contains(e.target)) {
       chatWidget.classList.remove("visible");
     }
   });
@@ -156,4 +155,39 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     });
   }
+
+  // Project overlay functionality
+  document.querySelectorAll(".project-card").forEach((card) => {
+    card.addEventListener("click", (e) => {
+      const projectId = card.id;
+      let projectContentHtml = "";
+
+      // Example project content, you can customize this
+      if (projectId === "project1") {
+        projectContentHtml = `
+          <h2>Project 1</h2>
+          <p>Details about Project 1...</p>
+        `;
+      } else if (projectId === "project2") {
+        projectContentHtml = `
+          <h2>Project 2</h2>
+          <p>Details about Project 2...</p>
+        `;
+      }
+
+      projectContent.innerHTML = projectContentHtml;
+      projectOverlay.style.display = "flex"; // Show overlay
+    });
+  });
+
+  closeProjectBox.addEventListener("click", () => {
+    projectOverlay.style.display = "none"; // Hide overlay
+  });
+
+  // Close overlay when clicking outside the project box
+  projectOverlay.addEventListener("click", (e) => {
+    if (e.target === projectOverlay) {
+      projectOverlay.style.display = "none"; // Hide overlay
+    }
+  });
 });

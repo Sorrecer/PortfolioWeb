@@ -57,26 +57,37 @@
       id="projects"
       class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
     >
-      <h2>Projects</h2>
+      <h2 style="text-align: center">Projects</h2>
       <div class="project-list">
-        <a href="/project1" class="project-card">
-          <h3>Project 1</h3>
-          <p>Description of project 1.</p>
-        </a>
-        <a href="/project2" class="project-card">
-          <h3>Project 2</h3>
-          <p>Description of project 2.</p>
-        </a>
-        <a href="/project3" class="project-card">
-          <h3>Project 3</h3>
-          <p>Description of project 3.</p>
-        </a>
-        <a href="/project4" class="project-card">
-          <h3>Project 4</h3>
-          <p>Description of project 4.</p>
-        </a>
+        <div class="project-card" id="project1">
+          <div class="project-details">
+            <h3>Project 1</h3>
+            <p>Description of project 1.</p>
+          </div>
+          <div class="project-image">
+            <img src="/proj1.png" alt="Project 1 Image" />
+          </div>
+        </div>
+        <div class="project-card" id="project2">
+          <div class="project-details">
+            <h3>Project 2</h3>
+            <p>Description of project 2.</p>
+          </div>
+          <div class="project-image">
+            <img src="/proj1.png" alt="Project 2 Image" />
+          </div>
+        </div>
       </div>
     </section>
+
+    <div id="project-overlay" class="project-overlay">
+      <div class="project-box">
+        <button id="close-project-box" class="close-button">X</button>
+        <div id="project-content">
+          <!-- Project details will be injected here -->
+        </div>
+      </div>
+    </div>
 
     <section
       id="experience"
