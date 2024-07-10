@@ -48,6 +48,11 @@ body {
   font-family: "Gram Bold", Arial, sans-serif;
 }
 
+.navigation {
+  display: flex;
+  justify-content: center;
+}
+
 /* Sections */
 section {
   background-color: rgba(
@@ -191,13 +196,26 @@ section {
 }
 
 /* Projects */
+.project-slider {
+  overflow: hidden;
+}
+
 .project-list {
   display: flex;
-  flex-direction: column; /* Default to column layout */
+  flex-wrap: wrap; /* Enable wrapping for grid layout */
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-rows: 1fr 1fr; /* Two rows */
   gap: 1em;
+  flex: 1 0 100%; /* Each slide takes full width */
 }
 
 .project-card {
+  flex: 1 1 50%; /* Two cards per row */
   display: flex;
   align-items: center;
   background-color: rgba(
@@ -297,12 +315,6 @@ section {
 
 /* Media Query for Two Columns Layout */
 @media (min-width: 768px) {
-  .project-list {
-    flex-direction: row; /* Change to row layout */
-    flex-wrap: wrap; /* Allow wrapping */
-    gap: 1em; /* Ensure gap between rows and columns */
-  }
-
   .project-card {
     flex: 1 1 calc(50% - 1em); /* Two columns */
     margin-bottom: 1em; /* Margin to separate rows */
@@ -326,6 +338,37 @@ section {
   .project-card p {
     font-size: 0.875rem;
   }
+}
+
+.project-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #333;
+  cursor: pointer;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5em;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+
+.dot.active {
+  background-color: #555;
 }
 
 /* Animation */

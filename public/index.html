@@ -18,15 +18,16 @@
   </head>
   <body>
     <header>
-      <h1>Kenny Anaga Portfolio</h1>
-      <nav>
-        <a class="noto-sans-title" href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-      </nav>
+      <div class="header-content">
+        <h1>Kenny Anaga Portfolio</h1>
+        <nav class="navigation noto-sans-title">
+          <a href="#about">About Me</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- HTML -->
     <!-- HTML -->
     <section
       id="about-section"
@@ -58,25 +59,136 @@
       class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
     >
       <h2 style="text-align: center">Projects</h2>
-      <div class="project-list">
-        <div class="project-card" id="project1">
-          <div class="project-details">
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
+      <div class="project-slider">
+        <div class="project-list">
+          <!-- Slide 1 -->
+          <div class="project-slide">
+            <div class="project-card" id="project1">
+              <div class="project-details">
+                <h3>Project 1</h3>
+                <p>Description of project 1.</p>
+              </div>
+              <div class="project-image">
+                <img src="/proj1.png" alt="Project 1 Image" />
+              </div>
+            </div>
+            <div class="project-card" id="project2">
+              <div class="project-details">
+                <h3>Project 2</h3>
+                <p>Description of project 2.</p>
+              </div>
+              <div class="project-image">
+                <img src="/proj2.png" alt="Project 2 Image" />
+              </div>
+            </div>
+            <div class="project-card" id="project3">
+              <div class="project-details">
+                <h3>Project 3</h3>
+                <p>Description of project 3.</p>
+              </div>
+              <div class="project-image">
+                <img src="/proj3.png" alt="Project 3 Image" />
+              </div>
+            </div>
+            <div class="project-card" id="project4">
+              <div class="project-details">
+                <h3>Project 4</h3>
+                <p>Description of project 4.</p>
+              </div>
+              <div class="project-image">
+                <img src="/proj4.png" alt="Project 4 Image" />
+              </div>
+            </div>
           </div>
-          <div class="project-image">
-            <img src="/proj1.png" alt="Project 1 Image" />
+          <!-- Slide 2 -->
+          <div class="project-slide">
+            <div class="project-card" id="project5">
+              <div class="project-details">
+                <h3>Project 5</h3>
+                <p>Description of project 5.</p>
+              </div>
+              <div class="project-image">
+                <img src="/proj5.png" alt="Project 5 Image" />
+              </div>
+            </div>
+            <div class="project-card" id="project6">
+              <div class="project-details">
+                <h3>Project 6</h3>
+                <p>Description of project 6.</p>
+              </div>
+              <div class="project-image">
+                <img src="/proj6.png" alt="Project 6 Image" />
+              </div>
+            </div>
+            <div class="project-card" id="project7">
+              <div class="project-details">
+                <h3>Project 7</h3>
+                <p>Description of project 7.</p>
+              </div>
+              <div class="project-image">
+                <img src="/proj7.png" alt="Project 7 Image" />
+              </div>
+            </div>
+            <div class="project-card" id="project8">
+              <div class="project-details">
+                <h3>Project 8</h3>
+                <p>Description of project 8.</p>
+              </div>
+              <div class="project-image">
+                <img src="/proj8.png" alt="Project 8 Image" />
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="project-slide">
+            <div class="project-card" id="project9">
+              <div class="project-details">
+                <h3>Project 9</h3>
+                <p>Description of project 9.</p>
+              </div>
+              <div class="project-image">
+                <img src="/proj9.png" alt="Project 9 Image" />
+              </div>
+            </div>
+            <div class="project-card" id="project10">
+              <div class="project-details">
+                <h3>Project 10</h3>
+                <p>Description of project 10.</p>
+              </div>
+              <div class="project-image">
+                <img src="/proj10.png" alt="Project 10 Image" />
+              </div>
+            </div>
+            <div class="project-card" id="project11">
+              <div class="project-details">
+                <h3>Project 11</h3>
+                <p>Description of project 11.</p>
+              </div>
+              <div class="project-image">
+                <img src="/proj11.png" alt="Project 11 Image" />
+              </div>
+            </div>
+            <div class="project-card" id="project12">
+              <div class="project-details">
+                <h3>Project 12</h3>
+                <p>Description of project 12.</p>
+              </div>
+              <div class="project-image">
+                <img src="/proj12.png" alt="Project 12 Image" />
+              </div>
+            </div>
           </div>
         </div>
-        <div class="project-card" id="project2">
-          <div class="project-details">
-            <h3>Project 2</h3>
-            <p>Description of project 2.</p>
-          </div>
-          <div class="project-image">
-            <img src="/proj1.png" alt="Project 2 Image" />
-          </div>
-        </div>
+      </div>
+
+      <div class="project-navigation">
+        <button class="nav-button" id="prev-button">&lt;</button>
+        <span class="dots">
+          <span class="dot active" data-slide="0"></span>
+          <span class="dot" data-slide="1"></span>
+          <span class="dot" data-slide="2"></span>
+        </span>
+        <button class="nav-button" id="next-button">&gt;</button>
       </div>
     </section>
 

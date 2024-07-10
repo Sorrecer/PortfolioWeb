@@ -14,6 +14,44 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeProjectBox = document.getElementById("close-project-box");
   const projectContent = document.getElementById("project-content");
 
+  const projectList = document.querySelector(".project-list");
+  const dots = document.querySelectorAll(".dot");
+  const prevButton = document.getElementById("prev-button");
+  const nextButton = document.getElementById("next-button");
+  let currentSlide = 0;
+  const totalSlides = Math.ceil(projectList.children.length / 4);
+
+  function updateSlide() {
+    const offset = -currentSlide * 100;
+    projectList.style.transform = `translateX(${offset}%)`;
+
+    dots.forEach((dot) => dot.classList.remove("active"));
+    dots[currentSlide].classList.add("active");
+  }
+
+  prevButton.addEventListener("click", () => {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateSlide();
+    }
+  });
+
+  nextButton.addEventListener("click", () => {
+    if (currentSlide < totalSlides - 1) {
+      currentSlide++;
+      updateSlide();
+    }
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentSlide = index;
+      updateSlide();
+    });
+  });
+
+  updateSlide();
+
   // Toggle chat widget visibility when CTA button is clicked
   ctaButton.addEventListener("click", () => {
     chatWidget.classList.toggle("visible");
