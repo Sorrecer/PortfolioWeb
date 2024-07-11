@@ -14,43 +14,46 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeProjectBox = document.getElementById("close-project-box");
   const projectContent = document.getElementById("project-content");
 
-  const projectList = document.querySelector(".project-list");
   const dots = document.querySelectorAll(".dot");
-  const prevButton = document.getElementById("prev-button");
-  const nextButton = document.getElementById("next-button");
-  let currentSlide = 0;
-  const totalSlides = Math.ceil(projectList.children.length / 4);
+  const prevButton = document.querySelector(".prev");
+  const nextButton = document.querySelector(".next");
+  let slideIndex = 1;
 
-  function updateSlide() {
-    const offset = -currentSlide * 100;
-    projectList.style.transform = `translateX(${offset}%)`;
-
-    dots.forEach((dot) => dot.classList.remove("active"));
-    dots[currentSlide].classList.add("active");
+  // Slideshow functionality
+  function showSlides(n) {
+    const slides = document.querySelectorAll(".mySlides");
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    slides.forEach((slide, index) => {
+      slide.style.display = index + 1 === slideIndex ? "grid" : "none";
+    });
+    dots.forEach((dot, index) => {
+      dot.className = dot.className.replace(" active", "");
+      if (index + 1 === slideIndex) {
+        dot.className += " active";
+      }
+    });
   }
 
-  prevButton.addEventListener("click", () => {
-    if (currentSlide > 0) {
-      currentSlide--;
-      updateSlide();
-    }
-  });
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
 
-  nextButton.addEventListener("click", () => {
-    if (currentSlide < totalSlides - 1) {
-      currentSlide++;
-      updateSlide();
-    }
-  });
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
 
+  prevButton.addEventListener("click", () => plusSlides(-1));
+  nextButton.addEventListener("click", () => plusSlides(1));
   dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      currentSlide = index;
-      updateSlide();
-    });
+    dot.addEventListener("click", () => currentSlide(index + 1));
   });
 
-  updateSlide();
+  showSlides(slideIndex);
 
   // Toggle chat widget visibility when CTA button is clicked
   ctaButton.addEventListener("click", () => {

@@ -195,6 +195,25 @@ section {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow for dark theme */
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
 /* Projects */
 .project-slider {
   overflow: hidden;
@@ -206,6 +225,15 @@ section {
   transition: transform 0.5s ease-in-out;
 }
 
+.slide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1em;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
 .project-slide {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns */
@@ -214,27 +242,30 @@ section {
   flex: 1 0 100%; /* Each slide takes full width */
 }
 
+/* Project Cards */
 .project-card {
-  flex: 1 1 50%; /* Two cards per row */
-  display: flex;
-  align-items: center;
   background-color: rgba(
     34,
     34,
     34,
     0.1
   ); /* Dark semi-transparent background */
+  height: 150px;
   padding: 1em;
   border-radius: 8px;
   box-sizing: border-box;
-  color: #e5e7eb; /* Light text color */
+  color: #ffffff; /* Light text color */
+  text-shadow: rgba(0, 0, 0, 0.4);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow */
   text-decoration: none; /* Remove default link styles */
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-size: cover; /* Ensure the background image covers the entire card */
+  background-position: center; /* Center the background image */
 }
 
 .project-details {
   flex: 1; /* Take remaining space */
+  text-shadow: rgba(0, 0, 0, 0.9);
 }
 
 .project-image {
@@ -299,6 +330,7 @@ section {
 .project-card h3 {
   margin: 0;
   font-size: 1.25rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9); /* Text shadow */
 }
 
 .project-card p {
@@ -309,8 +341,57 @@ section {
 
 /* Hover Effect */
 .project-card:hover {
-  box-shadow: 0 4px 8px rgba(124, 124, 124, 0.6); /* Stronger shadow on hover */
-  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 1); /* Stronger shadow on hover */
+  transform: translateY(-10px); /* Slight lift effect */
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
 /* Media Query for Two Columns Layout */
@@ -360,15 +441,36 @@ section {
   gap: 0.5em;
 }
 
+/* The dots/bullets/indicators */
 .dot {
-  width: 10px;
-  height: 10px;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
   border-radius: 50%;
-  background-color: #ccc;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-.dot.active {
-  background-color: #555;
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Animation */
