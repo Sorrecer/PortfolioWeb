@@ -48,26 +48,30 @@ body {
   font-family: "Gram Bold", Arial, sans-serif;
 }
 
+/* Sections */
+section {
+  /* height: 80vh; */
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  color: #e5e7eb; /* Light text for readability */
+  padding: 20px;
+  border-radius: 30px;
+  margin: 20px auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow for dark theme */
+}
+
+/* .scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+} */
+
 .navigation {
   display: flex;
   justify-content: center;
-}
-
-/* Sections */
-section {
-  background-color: rgba(
-    34,
-    34,
-    34,
-    0.5
-  ); /* Dark semi-transparent background */
-  color: #e5e7eb; /* Light text for readability */
-  padding: 20px;
-  border-radius: 10px; /* Rounded corners */
-  margin: 20px auto; /* Center sections */
-  width: 90%;
-  max-width: 1200px; /* Limit width */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow for dark theme */
 }
 
 /* Header */
@@ -185,19 +189,6 @@ section h2 {
   }
 }
 
-/* Sections */
-section {
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-  color: #e5e7eb; /* Light text for readability */
-  padding: 20px;
-  border-radius: 30px;
-  margin: 20px auto;
-  margin-bottom: 50px;
-  width: 90%;
-  max-width: 1200px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow for dark theme */
-}
-
 * {
   box-sizing: border-box;
 }
@@ -264,11 +255,15 @@ section {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
   background-size: cover; /* Ensure the background image covers the entire card */
   background-position: center; /* Center the background image */
+  overflow: hidden;
 }
 
 .project-details {
   flex: 1; /* Take remaining space */
   text-shadow: rgba(0, 0, 0, 0.9);
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
 }
 
 .project-image {
@@ -291,6 +286,22 @@ section {
   display: none; /* Hidden by default */
   align-items: center;
   justify-content: center;
+}
+
+.divider {
+  border-top: 1px solid #bbb;
+  margin: 10px 0;
+}
+
+.skill-box {
+  display: inline-block;
+  color: black;
+  background-color: rgb(231, 231, 231);
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .project-box {
@@ -645,6 +656,7 @@ section {
   text-align: center;
   margin: 20px auto;
   border-radius: 10px;
+  height: fit-content;
   width: 90%;
   max-width: 1200px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);

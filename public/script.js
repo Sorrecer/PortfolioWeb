@@ -206,13 +206,143 @@ document.addEventListener("DOMContentLoaded", function () {
       // Example project content, you can customize this
       if (projectId === "project1") {
         projectContentHtml = `
-          <h2>Project 1</h2>
-          <p>Details about Project 1...</p>
+          <h2>Localization of Commercial Vehicle Plate Number with YOLOv8 and Bayesian Optimization</h2>
+          <h4 style="color:gray">2023 - 2024</h4>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Skills</p>
+            <div class="skill-box">Python</div>
+            <div class="skill-box">Object Detection</div>
+            <div class="skill-box">Machine Learning</div>
+            <div class="skill-box">Google Colab</div>
+            <div class="skill-box">Computer Vision</div>
+            <div class="skill-box">Dataset</div>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Details</p>
+          <p class="noto-sans-medium" style="text-align: justify;"> Thesis Project for College. The core of this project is to predict the location of commercial vehicles and extract license plate numbers based on the predicted bounding boxes. The primary motivation for detecting commercial vehicles is to prevent overloading. The dataset was self-collected, as no relevant data was available online at the time. 
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Source</p>
+          <div class="divider"></div>
         `;
       } else if (projectId === "project2") {
         projectContentHtml = `
-          <h2>Project 2</h2>
-          <p>Details about Project 2...</p>
+          <h2>Project2</h2>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Skills</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Details</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Source</p>
+          <div class="divider"></div>
+        `;
+      } else if (projectId === "project3") {
+        projectContentHtml = `
+          <h2>Project2</h2>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Skills</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Details</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Source</p>
+          <div class="divider"></div>
+        `;
+      } else if (projectId === "project4") {
+        projectContentHtml = `
+          <h2>Project2</h2>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Skills</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Details</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Source</p>
+          <div class="divider"></div>
+        `;
+      } else if (projectId === "project5") {
+        projectContentHtml = `
+          <h2>Project2</h2>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Skills</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Details</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Source</p>
+          <div class="divider"></div>
+        `;
+      } else if (projectId === "project6") {
+        projectContentHtml = `
+          <h2>Project2</h2>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Skills</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Details</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Source</p>
+          <div class="divider"></div>
+        `;
+      } else if (projectId === "project7") {
+        projectContentHtml = `
+          <h2>Project2</h2>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Skills</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Details</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Source</p>
+          <div class="divider"></div>
+        `;
+      } else if (projectId === "project8") {
+        projectContentHtml = `
+          <h2>Project2</h2>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Skills</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Details</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Source</p>
+          <div class="divider"></div>
+        `;
+      } else if (projectId === "project9") {
+        projectContentHtml = `
+          <h2>Project2</h2>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Skills</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Details</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Source</p>
+          <div class="divider"></div>
+        `;
+      } else if (projectId === "project10") {
+        projectContentHtml = `
+          <h2>Project2</h2>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Skills</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Details</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Source</p>
+          <div class="divider"></div>
+        `;
+      } else if (projectId === "project11") {
+        projectContentHtml = `
+          <h2>Project2</h2>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Skills</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Details</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Source</p>
+          <div class="divider"></div>
+        `;
+      } else if (projectId === "project12") {
+        projectContentHtml = `
+          <h2>Project2</h2>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Skills</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Details</p>
+          <div class="divider"></div>
+          <p class="noto-sans-bold">Source</p>
+          <div class="divider"></div>
         `;
       }
 
