@@ -218,11 +218,23 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="skill-box">Dataset</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
-          <p class="noto-sans-medium" style="text-align: justify;"> Thesis Project for College. The core of this project is to predict the location of commercial vehicles and extract license plate numbers based on the predicted bounding boxes. The primary motivation for detecting commercial vehicles is to prevent overloading. The dataset was self-collected, as no relevant data was available online at the time. 
+          <p class="noto-sans-medium" style="text-align: justify;"> Thesis Project for College. The core of this project is to predict the location of commercial vehicles and extract license plate image based on the predicted bounding boxes. The primary motivation for detecting commercial vehicles is to prevent overloading. The dataset was self-collected, as no relevant data was available online at the time. 
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
+          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <br>
+          <a href="https://www.kaggle.com/datasets/kennyanaga/commercial-vehicle-license-plate-dataset" target="_blank">Dataset Link</a>
           <div class="divider"></div>
-        `;
+          <p class="noto-sans-bold">Images</p>
+          <div class="image-grid">
+            <img src="/proj1/image1.jpg" alt="Image 1">
+            <img src="/proj1/image2.jpg" alt="Image 2">
+            <img src="/proj1/image3.jpg" alt="Image 3">
+            <img src="/proj1/image4.jpg" alt="Image 4">
+            <img src="/proj1/image5.jpg" alt="Image 5">
+            <img src="/proj1/image6.jpg" alt="Image 6">
+          </div>
+      `;
       } else if (projectId === "project2") {
         projectContentHtml = `
           <h2>Project2</h2>

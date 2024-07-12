@@ -121,6 +121,10 @@ section h2 {
   font-family: Arial, sans-serif; /* Use custom font */
 }
 
+a {
+  color: lightblue;
+}
+
 /* About Section */
 .about-section {
   display: flex;
@@ -276,16 +280,19 @@ section h2 {
   border-radius: 50%; /* Make the image circular */
 }
 
+/* Project Overlay */
 .project-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: none; /* Hidden by default */
-  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
   justify-content: center;
+  align-items: center;
+  overflow: auto; /* Ensure the overlay is scrollable */
+  z-index: 1000;
 }
 
 .divider {
@@ -306,13 +313,25 @@ section h2 {
 
 .project-box {
   background: rgba(0, 0, 0, 0.8);
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-height: 90%; /* Limit height to ensure it fits within the screen */
+  overflow: auto; /* Make the box scrollable if content exceeds the height */
+  animation: fadeIn 0.5s;
+}
+
+/* .project-box {
+  background: rgba(0, 0, 0, 0.8);
   padding: 2em;
   border-radius: 8px;
   max-width: 600px;
   width: 100%;
   box-sizing: border-box;
   animation: fadeIn 0.5s;
-}
+  overflow: auto; /* Make the box scrollable if content exceeds the height */
 
 .close-button {
   position: absolute;
@@ -386,6 +405,18 @@ section h2 {
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 /* Caption text */
