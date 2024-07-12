@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="divider"></div>
           <p class="noto-sans-bold">Images</p>
           <div class="image-grid">
-            <img src="/proj1/image1.jpg" alt="Image 1">
+            <img src="proj1/image1.jpg" alt="Image 1">
             <img src="/proj1/image2.jpg" alt="Image 2">
             <img src="/proj1/image3.jpg" alt="Image 3">
             <img src="/proj1/image4.jpg" alt="Image 4">
