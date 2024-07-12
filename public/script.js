@@ -227,12 +227,12 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="divider"></div>
           <p class="noto-sans-bold">Images</p>
           <div class="image-grid">
-            <img src="proj1/image1.jpg" alt="Image 1">
-            <img src="/proj1/image2.jpg" alt="Image 2">
-            <img src="/proj1/image3.jpg" alt="Image 3">
-            <img src="/proj1/image4.jpg" alt="Image 4">
-            <img src="/proj1/image5.jpg" alt="Image 5">
-            <img src="/proj1/image6.jpg" alt="Image 6">
+            <img src="/image1.jpg" alt="Image 1">
+            <img src="/image2.jpg" alt="Image 2">
+            <img src="/image3.jpg" alt="Image 3">
+            <img src="/image4.jpg" alt="Image 4">
+            <img src="/image5.jpg" alt="Image 5">
+            <img src="/image6.jpg" alt="Image 6">
           </div>
       `;
       } else if (projectId === "project2") {
