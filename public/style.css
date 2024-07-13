@@ -37,7 +37,8 @@
 }
 
 body {
-  background-image: url("/bgcolor.jpg");
+  /* background-image: url("/bgcolor.jpg"); */
+  background-color: #151515;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -51,16 +52,16 @@ body {
 /* Sections */
 section {
   /* height: 80vh; */
-  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+  /* background-color: rgba(0, 0, 0, 0.3); Semi-transparent background */
   color: #e5e7eb; /* Light text for readability */
   padding: 20px;
   border-radius: 30px;
   margin: 20px auto;
-  margin-bottom: 50px;
-  margin-top: 50px;
+  /* margin-bottom: 50px; */
+  /* margin-top: 50px; */
   width: 90%;
   max-width: 1200px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow for dark theme */
+  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); Deeper shadow for dark theme */
 }
 
 /* .scroll-container {
@@ -130,8 +131,8 @@ a {
   display: flex;
   justify-content: center;
   padding: 50px; /* Add padding for better spacing */
-  margin-top: 50px;
-  margin-bottom: 50px;
+  /* margin-top: 50px; */
+  /* margin-bottom: 50px; */
 }
 
 .about-container {
@@ -393,12 +394,12 @@ a {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
+  /* background-color: rgba(0, 0, 0, 0.4); */
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -419,12 +420,12 @@ a {
   border-radius: 8px;
 }
 
-/* Media query for larger screens */
+/* Media query for larger screens
 @media (min-width: 600px) {
   .image-grid {
     grid-template-columns: 1fr 1fr;
   }
-}
+} */
 
 /* Caption text */
 .text {

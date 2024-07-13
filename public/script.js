@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h2>Localization of Commercial Vehicle Plate Number with YOLOv8 and Bayesian Optimization</h2>
           <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Skills</p>
+          <p class="noto-sans-bold">Skills and Techs</p>
             <div class="skill-box">Python</div>
             <div class="skill-box">Object Detection</div>
             <div class="skill-box">Machine Learning</div>
@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="skill-box">Dataset</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
-          <p class="noto-sans-medium" style="text-align: justify;"> Thesis Project for College. The core of this project is to predict the location of commercial vehicles and extract license plate image based on the predicted bounding boxes. The primary motivation for detecting commercial vehicles is to prevent overloading. The dataset was self-collected, as no relevant data was available online at the time. 
+          <p class="noto-sans-medium" style="text-align: justify;"> Thesis Project for College. The core of this computer vision project is to predict the location of commercial vehicles and extract license plate image based on the predicted bounding boxes. The primary motivation for detecting commercial vehicles is to prevent overloading. The dataset was self-collected, as no relevant data was available online at the time. 
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
           <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h2>Legend of Pandawa</h2>
           <h4 style="color:gray">2021</h4>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Skills</p>
+          <p class="noto-sans-bold">Skills and Techs</p>
             <div class="skill-box">Game Development</div>
             <div class="skill-box">Game Design</div>
             <div class="skill-box">Pixel Arts</div>
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h2>Inventaris Pika</h2>
           <h4 style="color:gray">2022</h4>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Skills</p>
+          <p class="noto-sans-bold">Skills and Techs</p>
             <div class="skill-box">Web Programming</div>
             <div class="skill-box">HTML</div>
             <div class="skill-box">CSS</div>
@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h2>Efficient Computation of Mandelbrot Set Generation with Compute Unified Device Architecture (CUDA)</h2>
           <h4 style="color:gray">2022</h4>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Skills</p>
+          <p class="noto-sans-bold">Skills and Techs</p>
             <div class="skill-box">Python</div>
             <div class="skill-box">Parallel programming</div>
             <div class="skill-box">Machine Process</div>
@@ -326,41 +326,56 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (projectId === "project5") {
         projectContentHtml = `
           <h2>Project2</h2>
-          <h4 style="color:gray">2023 - 2024</h4>
+          <h4 style="color:gray">2024</h4>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Skills</p>
+          <p class="noto-sans-bold">Skills and Techs</p>
             <div class="skill-box">Python</div>
+            <div class="skill-box">AI</div>
+            <div class="skill-box">Automation</div>
+            <div class="skill-box">Optical Character Recognition</div>
+            <div class="skill-box">Javascript</div>
+            <div class="skill-box">LLM</div>
+            <div class="skill-box">Google Gemini</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
-           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Chat bot project in Pony Town, a social massive multiplayer online game. This chat bot includes various mini games and features a standout AI chat, allowing players to interact directly with AI using AI prompts that have memory and personality, enabling continuous chat interaction. Google Gemini is used as the Large Language Model.</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
-          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <a href="https://github.com/Sorrecer/PonyTownBotv2" target="_blank">Source Code Link</a>
           <br>
+          <a href="https://www.youtube.com/watch?v=8LgPhX1Yyzc" target="_blank">Small Clip</a>
           <div class="divider"></div>
           <p class="noto-sans-bold">Images</p>
           <div class="image-grid">
-            <img src="/image1.jpg" alt="Image 1">
+            <img src="/proj5-1.jpg" alt="Image 1">
+            <img src="/proj5-3.jpg" alt="Image 1">
+            <img src="/proj5-2.jpg" alt="Image 1">
+            <img src="/proj5-4.jpg" alt="Image 1">
+            <img src="/proj5-5.jpg" alt="Image 1">
           </div>
         `;
       } else if (projectId === "project6") {
         projectContentHtml = `
-          <h2>Project2</h2>
-          <h4 style="color:gray">2023 - 2024</h4>
+          <h2>Portfolio Web</h2>
+          <h4 style="color:gray">2024</h4>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Skills</p>
-            <div class="skill-box">Python</div>
+          <p class="noto-sans-bold">Skills and Techs</p>
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">Javascript</div>
+            <div class="skill-box">AI</div>
+            <div class="skill-box">Web Programming</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
-           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
+           <p class="noto-sans-medium" style="text-align: justify;">My simple web portfolio containing my profile, projects, and history. Built with vanilla JavaScript featuring a standout AI chatbot. Users can interact with AI to inquire about information regarding Kenny. The language model used is Google Gemini.</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
-          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <a href="https://github.com/Sorrecer/PortfolioWeb" target="_blank">Source Code Link</a>
           <br>
           <div class="divider"></div>
           <p class="noto-sans-bold">Images</p>
           <div class="image-grid">
-            <img src="/image1.jpg" alt="Image 1">
+            <img src="/proj5-1.jpg" alt="Image 1">
           </div>
         `;
       } else if (projectId === "project7") {
@@ -368,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h2>Project2</h2>
           <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Skills</p>
+          <p class="noto-sans-bold">Skills and Techs</p>
             <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
@@ -388,7 +403,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h2>Project2</h2>
           <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Skills</p>
+          <p class="noto-sans-bold">Skills and Techs</p>
             <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
@@ -408,7 +423,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h2>Project2</h2>
           <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Skills</p>
+          <p class="noto-sans-bold">Skills and Techs</p>
             <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
@@ -428,7 +443,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h2>Project2</h2>
           <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Skills</p>
+          <p class="noto-sans-bold">Skills and Techs</p>
             <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
@@ -448,7 +463,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h2>Project2</h2>
           <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Skills</p>
+          <p class="noto-sans-bold">Skills and Techs</p>
             <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
@@ -468,7 +483,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <h2>Project2</h2>
           <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Skills</p>
+          <p class="noto-sans-bold">Skills and Techs</p>
             <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
