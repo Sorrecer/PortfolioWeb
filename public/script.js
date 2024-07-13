@@ -237,124 +237,239 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
       } else if (projectId === "project2") {
         projectContentHtml = `
-          <h2>Project2</h2>
+          <h2>Legend of Pandawa</h2>
+          <h4 style="color:gray">2021</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
+            <div class="skill-box">Game Development</div>
+            <div class="skill-box">Game Design</div>
+            <div class="skill-box">Pixel Arts</div>
+            <div class="skill-box">Animation</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
+           <p class="noto-sans-medium" style="text-align: justify;">The game project created for the national competition GEMASTIK XIV. Legend of Pandawa is a retro doom-like action game where users play as Pandawa characters and follow the storyline. In this project, my main role was in creating sprites and animations. This game successfully reached the finalist nomination.</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
+          <a href="https://www.youtube.com/watch?v=5tarsoBcpqY" target="_blank">Trailer Link</a>
+          <br>
+          <a>DM me for game apk!</a>
           <div class="divider"></div>
+          <p class="noto-sans-bold">Images</p>
+          <div class="image-grid">
+            <img src="/proj2-1.jpg" alt="Image 21">
+            <img src="/proj2-2.jpg" alt="Image 22">
+            <img src="/proj2-3.jpg" alt="Image 23">
+            <img src="/proj2-4.jpg" alt="Image 24">
+            <img src="/proj2-5.png" alt="Image 25">
+            <img src="/proj2-6.png" alt="Image 26">
+            <img src="/proj2-7.jpg" alt="Image 27">
+            <img src="/proj2-8.jpg" alt="Image 28">
+          </div>
         `;
       } else if (projectId === "project3") {
         projectContentHtml = `
-          <h2>Project2</h2>
+          <h2>Inventaris Pika</h2>
+          <h4 style="color:gray">2022</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
+            <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
+          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <br>
           <div class="divider"></div>
+          <p class="noto-sans-bold">Images</p>
+          <div class="image-grid">
+            <img src="/proj2-1.jpg" alt="Image 1">
+            <img src="/proj2-2.jpg" alt="Image 1">
+            <img src="/proj2-3.jpg" alt="Image 1">
+            <img src="/proj2-4.jpg" alt="Image 1">
+            <img src="/proj2-5.png" alt="Image 1">
+            <img src="/proj2-6.png" alt="Image 1">
+          </div>
         `;
       } else if (projectId === "project4") {
         projectContentHtml = `
           <h2>Project2</h2>
+          <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
+            <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
+          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <br>
           <div class="divider"></div>
+          <p class="noto-sans-bold">Images</p>
+          <div class="image-grid">
+            <img src="/image1.jpg" alt="Image 1">
+          </div>
         `;
       } else if (projectId === "project5") {
         projectContentHtml = `
           <h2>Project2</h2>
+          <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
+            <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
+          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <br>
           <div class="divider"></div>
+          <p class="noto-sans-bold">Images</p>
+          <div class="image-grid">
+            <img src="/image1.jpg" alt="Image 1">
+          </div>
         `;
       } else if (projectId === "project6") {
         projectContentHtml = `
           <h2>Project2</h2>
+          <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
+            <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
+          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <br>
           <div class="divider"></div>
+          <p class="noto-sans-bold">Images</p>
+          <div class="image-grid">
+            <img src="/image1.jpg" alt="Image 1">
+          </div>
         `;
       } else if (projectId === "project7") {
         projectContentHtml = `
           <h2>Project2</h2>
+          <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
+            <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
+          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <br>
           <div class="divider"></div>
+          <p class="noto-sans-bold">Images</p>
+          <div class="image-grid">
+            <img src="/image1.jpg" alt="Image 1">
+          </div>
         `;
       } else if (projectId === "project8") {
         projectContentHtml = `
           <h2>Project2</h2>
+          <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
+            <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
+          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <br>
           <div class="divider"></div>
+          <p class="noto-sans-bold">Images</p>
+          <div class="image-grid">
+            <img src="/image1.jpg" alt="Image 1">
+          </div>
         `;
       } else if (projectId === "project9") {
         projectContentHtml = `
           <h2>Project2</h2>
+          <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
+            <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
+          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <br>
           <div class="divider"></div>
+          <p class="noto-sans-bold">Images</p>
+          <div class="image-grid">
+            <img src="/image1.jpg" alt="Image 1">
+          </div>
         `;
       } else if (projectId === "project10") {
         projectContentHtml = `
           <h2>Project2</h2>
+          <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
+            <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
+          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <br>
           <div class="divider"></div>
+          <p class="noto-sans-bold">Images</p>
+          <div class="image-grid">
+            <img src="/image1.jpg" alt="Image 1">
+          </div>
         `;
       } else if (projectId === "project11") {
         projectContentHtml = `
           <h2>Project2</h2>
+          <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
+            <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
+          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <br>
           <div class="divider"></div>
+          <p class="noto-sans-bold">Images</p>
+          <div class="image-grid">
+            <img src="/image1.jpg" alt="Image 1">
+          </div>
         `;
       } else if (projectId === "project12") {
         projectContentHtml = `
           <h2>Project2</h2>
+          <h4 style="color:gray">2023 - 2024</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
+            <div class="skill-box">Python</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
+          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <br>
           <div class="divider"></div>
+          <p class="noto-sans-bold">Images</p>
+          <div class="image-grid">
+            <img src="/image1.jpg" alt="Image 1">
+          </div>
         `;
       }
 
