@@ -37,7 +37,7 @@
 }
 
 body {
-  background-image: url("/bg.jpg");
+  background-image: url("/bgcolor.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

@@ -289,32 +289,38 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="divider"></div>
           <p class="noto-sans-bold">Images</p>
           <div class="image-grid">
-            <img src="/proj2-1.jpg" alt="Image 1">
-            <img src="/proj2-2.jpg" alt="Image 1">
-            <img src="/proj2-3.jpg" alt="Image 1">
-            <img src="/proj2-4.jpg" alt="Image 1">
-            <img src="/proj2-5.png" alt="Image 1">
-            <img src="/proj2-6.png" alt="Image 1">
+            <img src="/proj3-1.png" alt="Image 1">
+            <img src="/proj3-2.png" alt="Image 1">
+            <img src="/proj3-3.png" alt="Image 1">
+            <img src="/proj3-4.png" alt="Image 1">
+            <img src="/proj3-5.png" alt="Image 1">
+            <img src="/proj3-6.png" alt="Image 1">
           </div>
         `;
       } else if (projectId === "project4") {
         projectContentHtml = `
-          <h2>Project2</h2>
-          <h4 style="color:gray">2023 - 2024</h4>
+          <h2>Efficient Computation of Mandelbrot Set Generation with Compute Unified Device Architecture (CUDA)</h2>
+          <h4 style="color:gray">2022</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
             <div class="skill-box">Python</div>
+            <div class="skill-box">Parallel programming</div>
+            <div class="skill-box">Machine Process</div>
+            <div class="skill-box">Google Colab</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
-           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
+           <p class="noto-sans-medium" style="text-align: justify;">The Mandelbrot set is one of the fractal generations that need a complex computational process to generate it. In this research, the execution of a Mandelbrot Set generation using the CPU and GPU (CUDA) will be done. Parallelization that occurs on CUDA’s Mandelbrot set generation, results in relatively faster execution time than sequential work on the CPU in certain cases.</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
-          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <a href="https://ieeexplore.ieee.org/document/9930601" target="_blank">Publication Link</a>
           <br>
           <div class="divider"></div>
           <p class="noto-sans-bold">Images</p>
           <div class="image-grid">
-            <img src="/image1.jpg" alt="Image 1">
+            <img src="/proj4-1.png" alt="Image 1">
+            <img src="/proj4-3.png" alt="Image 1">
+            <img src="/proj4-2.jpg" alt="Image 1">
+            <img src="/proj4-4.png" alt="Image 1">
           </div>
         `;
       } else if (projectId === "project5") {
