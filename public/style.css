@@ -409,7 +409,7 @@ a {
 
 .image-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 10px;
 }
 
@@ -417,6 +417,13 @@ a {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+/* Media query for larger screens */
+@media (min-width: 600px) {
+  .image-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* Caption text */

@@ -272,13 +272,19 @@ document.addEventListener("DOMContentLoaded", function () {
           <h4 style="color:gray">2022</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills</p>
-            <div class="skill-box">Python</div>
+            <div class="skill-box">Web Programming</div>
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">PHP</div>
+            <div class="skill-box">CodeIgniter</div>
+            <div class="skill-box">Javascript</div>
+            <div class="skill-box">Bootstrap</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
-           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
+           <p class="noto-sans-medium" style="text-align: justify;">College internship project. Developed a school inventory system to manage incoming and outgoing assets and generate asset data reports. The system includes authentication and notifications related to stock levels. Technologies used include HTML, CSS, PHP, JavaScript, with the CodeIgniter and Bootstrap frameworks.</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
-          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <a href="https://github.com/Sorrecer/InventarisPIKA" target="_blank">Source Code Link</a>
           <br>
           <div class="divider"></div>
           <p class="noto-sans-bold">Images</p>
