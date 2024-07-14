@@ -140,8 +140,8 @@ a {
   flex-direction: row;
   align-items: center; /* Center items vertically */
   gap: 20px; /* Adjust gap as needed */
-  width: 100%;
-  max-width: 1200px; /* Optionally set a max-width */
+  width: 120%;
+  max-width: 1500px; /* Optionally set a max-width */
 }
 
 .about-image {
@@ -149,11 +149,12 @@ a {
   align-items: center; /* Vertically center the image */
   justify-content: center; /* Center horizontally in its container */
   margin: 10px;
+  margin-right: 20px;
 }
 
 .about-image img {
-  width: 150px; /* Adjust size as needed */
-  height: 150px; /* Make height equal to width for circle */
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Make height equal to width for circle */
   border-radius: 50%; /* Make the image circular */
   object-fit: cover; /* Ensure the image covers the circle */
 }
