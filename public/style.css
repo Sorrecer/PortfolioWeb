@@ -759,8 +759,6 @@ a {
   }
 }
 
-/* chatbox */
-
 /* User Info Form Styles */
 .user-info-form {
   justify-content: center;
@@ -859,7 +857,7 @@ a {
 /* Chatbox Adjustments */
 #chatbox {
   height: calc(
-    85% - 60px
+    90% - 60px
   ); /* Adjust height to accommodate suggestion buttons */
   overflow-y: auto;
   background-color: #2c2c2c;
