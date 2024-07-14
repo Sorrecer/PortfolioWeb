@@ -153,10 +153,18 @@ a {
 }
 
 .about-image img {
-  width: 200px; /* Adjust size as needed */
-  height: 200px; /* Make height equal to width for circle */
-  border-radius: 50%; /* Make the image circular */
+  /* width: 200px; Adjust size as needed */
+  height: 400px;
+  border-radius: 10%;
   object-fit: cover; /* Ensure the image covers the circle */
+}
+
+.about-image img:hover {
+  /* width: 200px; Adjust size as needed */
+  height: 400px;
+  border-radius: 10%;
+  object-fit: cover; /* Ensure the image covers the circle */
+  animation: hueRotation 1s linear infinite;
 }
 
 .about-content {
@@ -936,6 +944,15 @@ h1 {
   background: #3700b3;
 }
 
+@keyframes hueRotation {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
 .jello:hover {
   background-clip: text;
   -webkit-background-clip: text;
@@ -943,6 +960,7 @@ h1 {
   background-color: #03e6ff;
   -webkit-animation: 0.9s both jello-vertical;
   animation: 0.9s both jello-vertical;
+  /* filter: hue-rotate(180deg); Adjust the value to change the color */
 }
 
 @-webkit-keyframes jello-vertical {

@@ -275,6 +275,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="skill-box">Web Programming</div>
             <div class="skill-box">HTML</div>
             <div class="skill-box">CSS</div>
+            <div class="skill-box">MySQL</div>
             <div class="skill-box">PHP</div>
             <div class="skill-box">CodeIgniter</div>
             <div class="skill-box">Javascript</div>
@@ -373,130 +374,164 @@ document.addEventListener("DOMContentLoaded", function () {
           <a href="https://github.com/Sorrecer/PortfolioWeb" target="_blank">Source Code Link</a>
           <br>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Images</p>
-          <div class="image-grid">
-            <img src="/proj5-1.jpg" alt="Image 1">
-          </div>
         `;
       } else if (projectId === "project7") {
         projectContentHtml = `
-          <h2>Project2</h2>
-          <h4 style="color:gray">2023 - 2024</h4>
+          <h2>Wordmaster</h2>
+          <h4 style="color:gray">2020</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills and Techs</p>
-            <div class="skill-box">Python</div>
+            <div class="skill-box">Game Development</div>
+            <div class="skill-box">Pixel Art</div>
+            <div class="skill-box">Godot</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
-           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Wordmaster is an RPG game project where the user plays the role of Wil to save a kingdom. The main goal of this game is English education. The user fights enemies by selecting the correct answer choices based on the given english grammar questions.</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
-          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <a href="https://www.youtube.com/watch?v=dodeTLRwiUQ" target="_blank">Video Teaser Link</a>
           <br>
+          <a>Contact me for the game apk!</a>
           <div class="divider"></div>
           <p class="noto-sans-bold">Images</p>
           <div class="image-grid">
-            <img src="/image1.jpg" alt="Image 1">
+            <img src="/proj7-1.jpg" alt="Image 1">
+            <img src="/proj7-3.jpg" alt="Image 1">
+            <img src="/proj7-2.jpg" alt="Image 1">
+            <img src="/proj7-4.jpg" alt="Image 1">
+            <img src="/proj7-5.jpg" alt="Image 1">
+            <img src="/proj7-6.jpg" alt="Image 1">
+            <img src="/proj7-7.jpg" alt="Image 1">
+            <img src="/proj7-8.jpg" alt="Image 1">
           </div>
         `;
       } else if (projectId === "project8") {
         projectContentHtml = `
-          <h2>Project2</h2>
-          <h4 style="color:gray">2023 - 2024</h4>
+          <h2>SoloBudaya2</h2>
+          <h4 style="color:gray">2022</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills and Techs</p>
-            <div class="skill-box">Python</div>
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">Javascript</div>
+            <div class="skill-box">Web Programming</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
-           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
+           <p class="noto-sans-medium" style="text-align: justify;">SoloBudaya is a web-based Indonesian cultural learning application featuring interactive materials and quizzes. The application offers a variety of cultural content from different regions in Indonesia. Users can study the material and complete short quizzes related to specific regions.</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
-          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <a href="https://github.com/Sorrecer/Project-Solobudaya" target="_blank">Source Code Link</a>
           <br>
           <div class="divider"></div>
           <p class="noto-sans-bold">Images</p>
           <div class="image-grid">
-            <img src="/image1.jpg" alt="Image 1">
+            <img src="/proj8-1.png" alt="Image 1">
+            <img src="/proj8-3.png" alt="Image 1">
+            <img src="/proj8-2.png" alt="Image 1">
+            <img src="/proj8-4.png" alt="Image 1">
+            <img src="/proj8-5.png" alt="Image 1">
+            <img src="/proj8-6.png" alt="Image 1">
+            <img src="/proj8-7.png" alt="Image 1">
           </div>
         `;
       } else if (projectId === "project9") {
         projectContentHtml = `
-          <h2>Project2</h2>
-          <h4 style="color:gray">2023 - 2024</h4>
+          <h2>Shark Bounce Ball</h2>
+          <h4 style="color:gray">2022</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills and Techs</p>
-            <div class="skill-box">Python</div>
+            <div class="skill-box">Game Development</div>
+            <div class="skill-box">Pixel Art</div>
+            <div class="skill-box">Unity</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
-           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Shark Bounce Ball is a game project created for modeling and simulation subject in college. The gameplay of Shark Bounce Ball involves controlling a ball and bouncing it to destroy bombs in the sea while avoiding the existing bombs. Shark Bounce Ball is made using Unity with many physics reactions occurring within the game</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
-          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <a href="https://drive.google.com/file/d/1CgHCzeuwAiJSsVefwSxSfJ9V012PU4S-/view?usp=sharing" target="_blank">Source Code Link</a>
           <br>
           <div class="divider"></div>
           <p class="noto-sans-bold">Images</p>
           <div class="image-grid">
-            <img src="/image1.jpg" alt="Image 1">
+            <img src="/proj7-1.jpg" alt="Image 1">
+            <img src="/proj7-3.jpg" alt="Image 1">
+            <img src="/proj7-2.jpg" alt="Image 1">
+            <img src="/proj7-4.jpg" alt="Image 1">
+            <img src="/proj7-5.jpg" alt="Image 1">
+            <img src="/proj7-6.jpg" alt="Image 1">
+            <img src="/proj7-7.jpg" alt="Image 1">
+            <img src="/proj7-8.jpg" alt="Image 1">
           </div>
         `;
       } else if (projectId === "project10") {
         projectContentHtml = `
-          <h2>Project2</h2>
-          <h4 style="color:gray">2023 - 2024</h4>
+          <h2>Sin Confession</h2>
+          <h4 style="color:gray">2024</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills and Techs</p>
-            <div class="skill-box">Python</div>
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">Javascript</div>
+            <div class="skill-box">AI</div>
+            <div class="skill-box">Web Programming</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
-           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
+           <p class="noto-sans-medium" style="text-align: justify;">A small project: a website for interacting with AI, where the user takes on the role of someone wanting to confess sins. The AI will act as a witty priest and will give appropriate penance for the sins confessed by the user, while maintaining a humorous aspect.</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
-          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <a href="https://github.com/Sorrecer/sinconfession" target="_blank">Source Code Link</a>
           <br>
+          <a href="https://sinconfession.vercel.app/"  target="_blank">Web Link</a>
           <div class="divider"></div>
           <p class="noto-sans-bold">Images</p>
           <div class="image-grid">
-            <img src="/image1.jpg" alt="Image 1">
+            <img src="/proj10.jpg" alt="Image 1">
+            <img src="/proj10-1.jpg" alt="Image 1">
+            <img src="/proj10-3.jpg" alt="Image 1">
+            <img src="/proj10-2.jpg" alt="Image 1">
+            <img src="/proj10-4.jpg" alt="Image 1">
           </div>
         `;
       } else if (projectId === "project11") {
         projectContentHtml = `
-          <h2>Project2</h2>
-          <h4 style="color:gray">2023 - 2024</h4>
+          <h2>KennyLib</h2>
+          <h4 style="color:gray">2021</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills and Techs</p>
-            <div class="skill-box">Python</div>
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">MySQL</div>
+            <div class="skill-box">Java</div>
+            <div class="skill-box">Web Programming</div>
+            <div class="skill-box">Android Studio</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
-           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Kenny Lib is a web-based application that serves as a library information system. This application offers various functionalities designed for an administrator, members (users), and visitors. Kenny Lib can be accessed through a website as well as a mobile application.</p>
           <div class="divider"></div>
           <p class="noto-sans-bold">Source</p>
-          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
+          <a href="https://github.com/Sorrecer/Project-Kenny-Lib" target="_blank">Source Code Link</a>
           <br>
           <div class="divider"></div>
           <p class="noto-sans-bold">Images</p>
           <div class="image-grid">
-            <img src="/image1.jpg" alt="Image 1">
+            <img src="/proj11-5.jpg" alt="Image 1">
+            <img src="/proj11-6.jpg" alt="Image 1">
+            <img src="/proj11-5.png" alt="Image 1">
           </div>
         `;
       } else if (projectId === "project12") {
         projectContentHtml = `
-          <h2>Project2</h2>
-          <h4 style="color:gray">2023 - 2024</h4>
+          <h2>Legend of Pandawa:Remaster</h2>
+          <h4 style="color:gray">2024</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills and Techs</p>
-            <div class="skill-box">Python</div>
+            <div class="skill-box">Game Development</div>
+            <div class="skill-box">Pixel Art</div>
+            <div class="skill-box">Game Modeling</div>
           <div class="divider"></div>
           <p class="noto-sans-bold">Details</p>
-           <p class="noto-sans-medium" style="text-align: justify;">Lorem Ipsum Lor sit Jamet</p>
+           <p class="noto-sans-medium" style="text-align: justify;">Remake of Legend of Pandawa. Planned to be a short, arcade game with improved action and animations.</p>
           <div class="divider"></div>
-          <p class="noto-sans-bold">Source</p>
-          <a href="https://github.com/Sorrecer/ANPR" target="_blank">Source Code Link</a>
-          <br>
-          <div class="divider"></div>
-          <p class="noto-sans-bold">Images</p>
-          <div class="image-grid">
-            <img src="/image1.jpg" alt="Image 1">
-          </div>
         `;
       }
 
@@ -515,4 +550,19 @@ document.addEventListener("DOMContentLoaded", function () {
       projectOverlay.style.display = "none"; // Hide overlay
     }
   });
+
+  // const img = document.getElementById("about-image");
+
+  // img.addEventListener("mouseover", () => {
+  //   // const randomHue = Math.floor(Math.random() * 360);
+  //   const randomSaturation = Math.floor(Math.random() * 100) + 50; // 50% to 250%
+  //   const randomBrightness = Math.floor(Math.random() * 100) + 50; // 50% to 250%
+  //   const randomContrast = Math.floor(Math.random() * 200) + 50; // 50% to 250%
+
+  //   img.style.filter = `hue-rotate(${randomHue}deg) saturate(${randomSaturation}%) brightness(${randomBrightness}%) contrast(${randomContrast}%)`;
+  // });
+
+  // img.addEventListener("mouseout", () => {
+  //   img.style.filter = "none";
+  // });
 });
