@@ -34,14 +34,16 @@ const model = genAI.getGenerativeModel({
     "link GitHub Kenny adalah https://github.com/Sorrecer . " +
     "link linkedin kenny adalah https://www.linkedin.com/in/kenny-anaga-376041224/ . " +
     "Email Kenny adalah anagakenny24@gmail.com. " +
+    "Skripsi yang dikerjakan Kenny yaitu mengenai lokalisasi plat nomor kendaraan niaga menggunakan YOLOv8 dan Bayesian Optimization. " +
+    "Kenny memiliki 11 project yang sudah dikerjakan, dapat dilihat pada laman portfolionya. " +
+    "Kenny pernah menjadi assisten praktikum 2 kali, yaitu mata kuliah Algoritma dan Pemrograman dan mata kuliah Grafika Komputasi Visual" +
     "Project yang sedang dilakukan yang kenny adalah 1. web portofolio 2. bot automatis pony town 3.Legend of Pandawa:remaster. " +
     "Legend of Pandawa merupakan game doom-like beat em up yang berlatar belakang wayang (Pandawa) dengan grafik yang unik. " +
     "Kenny dapat membuat pixelart dan animasinya untuk game.). Publikasi ilmiah Kenny yaitu Efficient computation of Mandelbrot set generation with Compute Unified Device Architecture (CUDA). " +
     "2022, https://doi.org/10.1109/icicos56336.2022.9930601 . Penghargaan yang pernah diterima yaitu Finalis Pengembangan Aplikasi Permainan GEMASTIK 14 : Karya Legend of Pandawa 2021 . " +
     "Kenny berdomisili di Semarang, Jawa Tengah. Informasi tidak penting yaitu = Game yang dimainkan Kenny ada chess, Dota2, Mobile legend, Pony Town, dan banyak game indie. " +
     "Rating catur (ELO) Kenny yaitu ~1300). Jika user tidak tahu ingin bertanya apa, tawarkan pengunjung bahwa Kenny dapat membuat AI chatbot atau web personal untuk perusahaan/instansi mereka. " +
-    "KKN Kenny ada pada desa Bantar Kulon, Pekalongan, bersama dengan 6 teman satu tim." +
-    "Kenny tidak suka blue archive, kenny sukanya tobrut.",
+    "KKN Kenny ada pada desa Bantar Kulon, Pekalongan, bersama dengan 6 teman satu tim.",
 });
 
 // Config AI
