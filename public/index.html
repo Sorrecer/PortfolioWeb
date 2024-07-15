@@ -24,6 +24,7 @@
           <a href="#about">About Me</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
+          <a href="#more-info">Contact Me</a>
         </nav>
       </div>
     </header>
@@ -59,6 +60,7 @@
           </div>
         </div>
       </section>
+
       <div class="divider" style="border-top: 1px solid #313131"></div>
 
       <!-- Projects Section HTML -->
@@ -266,7 +268,12 @@
         </div>
       </div>
 
-      <div class="divider" style="border-top: 1px solid #313131"></div>
+      <div class="container gears">
+        <span></span>
+        <div class="gear gear1"></div>
+        <div class="gear gear2"></div>
+        <span></span>
+      </div>
 
       <section
         id="experience"
@@ -296,108 +303,127 @@
 
       <div class="divider" style="border-top: 1px solid #313131"></div>
 
-    <!-- more info -->
-    <section id="more-info" class="more-info-section noto-sans-bold">
-      
-      <div class="contact-button-container">
-        <div id="contact-button" class="letter-image">
-          <div class="animated-mail">
-            <div class="back-fold"></div>
-            <div class="letter">
-              <div class="letter-border"></div>
-              <div class="letter-title"></div>
-              <div class="letter-context"></div>
-              <div class="letter-stamp">
-                <div class="letter-stamp-inner"></div>
+      <!-- more info -->
+      <section id="more-info" class="more-info-section noto-sans-bold">
+        <div class="contact-button-container">
+          <div id="contact-button" class="letter-image">
+            <div class="animated-mail">
+              <div class="back-fold"></div>
+              <div class="letter">
+                <div class="letter-border"></div>
+                <div class="letter-title"></div>
+                <div class="letter-context"></div>
+                <div class="letter-stamp">
+                  <div class="letter-stamp-inner"></div>
+                </div>
               </div>
+              <div class="top-fold"></div>
+              <div class="body"></div>
+              <div class="left-fold"></div>
             </div>
-            <div class="top-fold"></div>
-            <div class="body"></div>
-            <div class="left-fold"></div>
+            <div class="shadow">
+              <p style="font-size: 20px">🐣 Contact Me!</p>
+            </div>
           </div>
-          <div class="shadow">
-            <p style="font-size: 20px">🐣 Contact Me!</p>
+        </div>
+        <p>
+          Other informations about me are stored in the AI chat
+          <!-- Need more details or have questions? Chat with my AI assistant for
+        instant help! -->
+        </p>
+        <p>👈 Feel free to ask the AI</p>
+      </section>
+
+      <footer
+        class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+      >
+        <p>© 2024 Kenny Anaga</p>
+      </footer>
+
+      <button class="cta">
+        <span>AI Chatbot</span>
+        <svg width="15px" height="10px" viewBox="0 0 13 10">
+          <path d="M1,5 L11,5"></path>
+          <polyline points="8 1 12 5 8 9"></polyline>
+        </svg>
+      </button>
+
+      <!-- Chat Widget -->
+      <div id="chat-widget" class="hidden">
+        <div id="chat-header" class="noto-sans-bold">
+          <span>AI Chatbot</span>
+          <button id="close-chat">&times;</button>
+        </div>
+
+        <!-- User Info Form -->
+        <div id="user-info-form" class="user-info-form">
+          <input type="text" id="user-name" placeholder="Name" />
+          <input type="email" id="user-email" placeholder="Email (Optional)" />
+          <button id="submit-info">Start Chat</button>
+        </div>
+
+        <!-- Suggestion Buttons -->
+        <div id="suggestion-buttons" class="suggestion-buttons">
+          <button class="suggestion-button noto-sans-bold">
+            <span class="emoji">🧑</span> Who is Kenny Anaga?
+          </button>
+          <button class="suggestion-button noto-sans-bold">
+            <span class="emoji">📄</span> Tell me about Kenny's CV
+          </button>
+          <button class="suggestion-button noto-sans-bold">
+            <span class="emoji">📝</span> Kenny's projects
+          </button>
+        </div>
+
+        <div id="chatbox" class="noto-sans-bold"></div>
+        <div class="input-container noto-sans-bold">
+          <input type="text" id="user-input" placeholder="Ask me anything!" />
+          <button id="send-button">Send</button>
+        </div>
+      </div>
+
+      <div id="contact-widget" class="hidden">
+        <div id="chat-header" class="noto-sans-bold">
+          <span>Contact me!</span>
+          <button id="close-chat">&times;</button>
+        </div>
+        <div id="contact-body">
+          <div id="contact-form" class="contact-form">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="10"
+              placeholder="Message"
+              required
+            ></textarea>
+            <button type="submit">Send</button>
           </div>
         </div>
       </div>
-      <p>
-        Other informations about Kenny are stored in the AI chat
-        <!-- Need more details or have questions? Chat with my AI assistant for
-        instant help! -->
-      </p>
-      <p>👈 Feel free to ask the AI</p>
-    </section>
-
-    <footer
-      class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
-    >
-      <p>© 2024 Kenny Anaga</p>
-    </footer>
-
-    <button class="cta">
-      <span>AI Chatbot</span>
-      <svg width="15px" height="10px" viewBox="0 0 13 10">
-        <path d="M1,5 L11,5"></path>
-        <polyline points="8 1 12 5 8 9"></polyline>
-      </svg>
-    </button>
-
-    <!-- Chat Widget -->
-    <div id="chat-widget" class="hidden">
-      <div id="chat-header" class="noto-sans-bold">
-        <span>AI Chatbot</span>
-        <button id="close-chat">&times;</button>
-      </div>
-
-      <!-- User Info Form -->
-      <div id="user-info-form" class="user-info-form">
-        <input type="text" id="user-name" placeholder="Name" />
-        <input type="email" id="user-email" placeholder="Email (Optional)" />
-        <button id="submit-info">Start Chat</button>
-      </div>
-
-      <!-- Suggestion Buttons -->
-      <div id="suggestion-buttons" class="suggestion-buttons">
-        <button class="suggestion-button noto-sans-bold">
-          <span class="emoji">🧑</span> Who is Kenny Anaga?
-        </button>
-        <button class="suggestion-button noto-sans-bold">
-          <span class="emoji">📄</span> Tell me about Kenny's CV
-        </button>
-        <button class="suggestion-button noto-sans-bold">
-          <span class="emoji">📝</span> Kenny's projects
-        </button>
-      </div>
-
-      <div id="chatbox" class="noto-sans-bold"></div>
-      <div class="input-container noto-sans-bold">
-        <input type="text" id="user-input" placeholder="Ask me anything!" />
-        <button id="send-button">Send</button>
-      </div>
-    </div>
-
-    <div id="contact-widget" class="hidden">
-      <div id="chat-header" class="noto-sans-bold">
-        <span>Contact me!</span>
-        <button id="close-chat">&times;</button>
-      </div>
-      <form id="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required /><br /><br />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required /><br /><br />
-        <label for="message">Message:</label><br />
-        <textarea id="message" name="message" rows="5" required></textarea
-        ><br /><br />
-        <button type="submit">Send</button>
-      </form>
     </div>
 
     <script src="script.js"></script>
     <script src="chatscript.js"></script>
     <script>
       document
-        .getElementById("contactForm")
+        .getElementById("contact-form")
         .addEventListener("submit", async (event) => {
           event.preventDefault();
 

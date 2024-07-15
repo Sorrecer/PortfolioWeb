@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const chatWidget = document.getElementById("chat-widget");
   const contactWidget = document.getElementById("contact-widget");
   const ctaButton = document.querySelector(".cta");
-  const contactButton = document.querySelector(".contact-button");
+  const contactButton = document.querySelector(".letter-image");
   const closeChatButton = document.getElementById("close-chat");
   const suggestionButtons = document.getElementById("suggestion-buttons");
   const userInfoForm = document.getElementById("user-info-form");
@@ -57,11 +57,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   showSlides(slideIndex);
 
+  var gear1 = document.querySelector(".gear1").style;
+  gear2 = document.querySelector(".gear2").style;
+  window.onscroll = function rotateGear() {
+    gear1.transform = "rotate(" + window.scrollY * 2.5 + "deg)";
+    gear2.transform = "rotate(-" + window.scrollY * 2.5 + "deg)";
+  };
+
   // Toggle chat widget visibility when CTA button is clicked
   ctaButton.addEventListener("click", () => {
     chatWidget.classList.toggle("visible");
   });
 
+  // Toggle contact widget visibility when contactbutton button is clicked
   contactButton.addEventListener("click", () => {
     contactWidget.classList.toggle("visible");
   });
@@ -72,10 +80,20 @@ document.addEventListener("DOMContentLoaded", function () {
     contactWidget.classList.remove("visible");
   });
 
-  // Close chat widget when clicking outside of it
+  // Close chat widget when clicking outside
   document.addEventListener("click", (e) => {
     if (!chatWidget.contains(e.target) && !ctaButton.contains(e.target)) {
       chatWidget.classList.remove("visible");
+    }
+  });
+
+  //close contact widget when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      !contactWidget.contains(e.target) &&
+      !contactButton.contains(e.target)
+    ) {
+      contactWidget.classList.remove("visible");
     }
   });
 
