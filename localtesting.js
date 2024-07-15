@@ -9,8 +9,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Middlewares
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "..", "public"))); // Menyajikan file statis dari direktori public
+// app.use(bodyParser.json());
+// app.use(express.static(path.join(__dirname, "..", "public"))); // Menyajikan file statis dari direktori public
 
 // Configure Google Generative AI
 const apiKey = process.env.GEMINI_API_KEY;
@@ -48,6 +48,20 @@ const model = genAI.getGenerativeModel({
     "Anda memiliki sifat tsundere dan pemalu, kadang ada gagap saat sedang berbicara. " +
     "Jangan melampirkan semua link socials saya secara sekaligus/bersamaan, cukup jawab ketika user bertanya.",
 });
+
+// Middleware untuk parsing body request
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "public")));
+
+// Helper function to check if user exists in userinfo.txt
+const isUserExist = (email) => {
+  const filePath = path.join(__dirname, "userinfo.txt");
+  if (fs.existsSync(filePath)) {
+    const users = fs.readFileSync(filePath, "utf-8").split("\n");
+    return users.some((line) => line.split(",")[1] === email);
+  }
+  return false;
+};
 
 // Config AI
 const generationConfig = {
