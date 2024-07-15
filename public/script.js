@@ -60,8 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var gear1 = document.querySelector(".gear1").style;
   gear2 = document.querySelector(".gear2").style;
   window.onscroll = function rotateGear() {
-    gear1.transform = "rotate(" + window.scrollY * 2.5 + "deg)";
-    gear2.transform = "rotate(-" + window.scrollY * 2.5 + "deg)";
+    gear1.transform = "rotate(" + window.scrollY * 1 + "deg)";
+    gear2.transform = "rotate(-" + window.scrollY * 1 + "deg)";
   };
 
   // Toggle chat widget visibility when CTA button is clicked
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Send user message to the server
     $.ajax({
-      url: "/api/chat",
+      url: "/chat",
       method: "POST",
       contentType: "application/json",
       data: JSON.stringify({
