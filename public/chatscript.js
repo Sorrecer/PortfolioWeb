@@ -22,7 +22,7 @@ $(document).ready(function () {
 
       // Send user message to the server
       $.ajax({
-        url: "/chat",
+        url: "/api/chat",
         method: "POST",
         contentType: "application/json",
         data: JSON.stringify({ message: message }),

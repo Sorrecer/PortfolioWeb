@@ -63,7 +63,7 @@ const chatSession = model.startChat({
 });
 
 // Endpoint untuk chat
-app.post("/chat", async (req, res) => {
+app.post("/api/chat", async (req, res) => {
   const { message, userName, userEmail } = req.body;
 
   // Validasi input
