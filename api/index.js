@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
-const nodemailer = require("nodemailer");
+// const nodemailer = require("nodemailer");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // Initialize express
@@ -93,7 +93,6 @@ app.post("/api/chat", async (req, res) => {
     res.json({ response: result.response.text() });
   } catch (error) {
     console.error("Error in communication with the AI:", error);
-    console.log(error);
     res.status(500).json({ error: "Failed to communicate with the AI." });
   }
 });
