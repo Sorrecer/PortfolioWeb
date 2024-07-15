@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const chatWidget = document.getElementById("chat-widget");
+  const contactWidget = document.getElementById("contact-widget");
   const ctaButton = document.querySelector(".cta");
+  const contactButton = document.querySelector(".contact-button");
   const closeChatButton = document.getElementById("close-chat");
   const suggestionButtons = document.getElementById("suggestion-buttons");
   const userInfoForm = document.getElementById("user-info-form");
@@ -60,9 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
     chatWidget.classList.toggle("visible");
   });
 
+  contactButton.addEventListener("click", () => {
+    contactWidget.classList.toggle("visible");
+  });
+
   // Hide chat widget when close button is clicked
   closeChatButton.addEventListener("click", () => {
     chatWidget.classList.remove("visible");
+    contactWidget.classList.remove("visible");
   });
 
   // Close chat widget when clicking outside of it

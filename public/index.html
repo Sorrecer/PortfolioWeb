@@ -294,16 +294,39 @@
         </ul>
       </section>
 
-      <!-- more info -->
-      <section id="more-info" class="more-info-section noto-sans-bold">
-        <p>
-          Other information about Kenny are stored in the AI chat
-          <!-- Need more details or have questions? Chat with my AI assistant for
+      <div class="divider" style="border-top: 1px solid #313131"></div>
+
+    <!-- more info -->
+    <section id="more-info" class="more-info-section noto-sans-bold">
+      
+      <div class="contact-button-container">
+        <div id="contact-button" class="letter-image">
+          <div class="animated-mail">
+            <div class="back-fold"></div>
+            <div class="letter">
+              <div class="letter-border"></div>
+              <div class="letter-title"></div>
+              <div class="letter-context"></div>
+              <div class="letter-stamp">
+                <div class="letter-stamp-inner"></div>
+              </div>
+            </div>
+            <div class="top-fold"></div>
+            <div class="body"></div>
+            <div class="left-fold"></div>
+          </div>
+          <div class="shadow">
+            <p style="font-size: 20px">🐣 Contact Me!</p>
+          </div>
+        </div>
+      </div>
+      <p>
+        Other informations about Kenny are stored in the AI chat
+        <!-- Need more details or have questions? Chat with my AI assistant for
         instant help! -->
-        </p>
-        <p>👈 Feel free to ask the AI</p>
-      </section>
-    </div>
+      </p>
+      <p>👈 Feel free to ask the AI</p>
+    </section>
 
     <footer
       class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
@@ -353,7 +376,55 @@
       </div>
     </div>
 
+    <div id="contact-widget" class="hidden">
+      <div id="chat-header" class="noto-sans-bold">
+        <span>Contact me!</span>
+        <button id="close-chat">&times;</button>
+      </div>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required /><br /><br />
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea
+        ><br /><br />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
     <script src="script.js"></script>
     <script src="chatscript.js"></script>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          const formData = new FormData(event.target);
+          const data = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            message: formData.get("message"),
+          };
+
+          const response = await fetch("/contact", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          });
+
+          if (response.ok) {
+            alert("Your message has been sent!");
+            event.target.reset();
+          } else {
+            alert(
+              "There was an error sending your message. Please try again later."
+            );
+          }
+        });
+    </script>
   </body>
 </html>
