@@ -98,36 +98,36 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
-// Route to handle form submission
-app.post("/api/contact", (req, res) => {
-  const { name, email, message } = req.body;
+// // Route to handle form submission
+// app.post("/api/contact", (req, res) => {
+//   const { name, email, message } = req.body;
 
-  // Set up the Nodemailer transporter
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.EMAIL_USER, // Retrieve from environment variables
-      pass: process.env.EMAIL_PASS, // Retrieve from environment variables
-    },
-  });
+//   // Set up the Nodemailer transporter
+//   const transporter = nodemailer.createTransport({
+//     service: "gmail",
+//     auth: {
+//       user: process.env.EMAIL_USER, // Retrieve from environment variables
+//       pass: process.env.EMAIL_PASS, // Retrieve from environment variables
+//     },
+//   });
 
-  const mailOptions = {
-    from: email,
-    to: process.env.EMAIL_USER, // Use the same email as the recipient
-    subject: `Contact Form Submission from ${name}`,
-    text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-  };
+//   const mailOptions = {
+//     from: email,
+//     to: process.env.EMAIL_USER, // Use the same email as the recipient
+//     subject: `Contact Form Submission from ${name}`,
+//     text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+//   };
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.error("Error sending email:", error);
-      res.status(500).send("Error sending email");
-    } else {
-      console.log("Email sent:", info.response);
-      res.status(200).send("Email sent");
-    }
-  });
-});
+//   transporter.sendMail(mailOptions, (error, info) => {
+//     if (error) {
+//       console.error("Error sending email:", error);
+//       res.status(500).send("Error sending email");
+//     } else {
+//       console.log("Email sent:", info.response);
+//       res.status(200).send("Email sent");
+//     }
+//   });
+// });
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
