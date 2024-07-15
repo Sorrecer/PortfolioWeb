@@ -93,6 +93,7 @@ app.post("/chat", async (req, res) => {
     res.json({ response: result.response.text() });
   } catch (error) {
     console.error("Error in communication with the AI:", error);
+    console.log(error);
     res.status(500).json({ error: "Failed to communicate with the AI." });
   }
 });

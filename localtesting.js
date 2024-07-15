@@ -2,7 +2,7 @@ require("dotenv").config(); // dotenv untuk load env (harus paling atas)
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
-const fs = require("fs"); // Menambahkan modul fs
+// const fs = require("fs"); // Menambahkan modul fs
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const app = express();
@@ -51,16 +51,6 @@ const model = genAI.getGenerativeModel({
 // Middleware untuk parsing body request
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
-
-// Helper function to check if user exists in userinfo.txt
-const isUserExist = (email) => {
-  const filePath = path.join(__dirname, "userinfo.txt");
-  if (fs.existsSync(filePath)) {
-    const users = fs.readFileSync(filePath, "utf-8").split("\n");
-    return users.some((line) => line.split(",")[1] === email);
-  }
-  return false;
-};
 
 // Config AI
 const generationConfig = {
