@@ -362,7 +362,7 @@ a {
   }
 
   .card {
-    width: 45%; /* Set width to 45% for two-column layout with some margin */
+    width: 40%; /* Set width to 45% for two-column layout with some margin */
     margin: 10px; /* Adjust margin for spacing */
   }
 
