@@ -360,6 +360,10 @@ a {
     align-items: center;
   }
 
+  .about-section {
+    height: fit-content;
+  }
+
   .card {
     width: 80%;
   }
