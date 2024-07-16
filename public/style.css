@@ -78,7 +78,7 @@ section {
   display: flex;
   justify-content: right;
   margin-right: 5%;
-  gap: 50px;
+  gap: 5%;
 }
 
 /* Header */
@@ -180,10 +180,11 @@ a {
   margin-bottom: 0;
   display: flex;
   justify-content: center;
-  padding: 50px; /* Add padding for better spacing */
-  border: 2px solid #333;
+  /* padding: 50px; Add padding for better spacing */
+  /* border: 2px solid #333;
   border-bottom: none;
-  border-top: none;
+  border-top: none; */
+  height: 90vh;
   /* margin-top: 50px; */
   /* margin-bottom: 50px; */
 }
@@ -193,7 +194,7 @@ a {
   flex-direction: row;
   align-items: center; /* Center items vertically */
   gap: 20px; /* Adjust gap as needed */
-  width: 120%;
+  width: 100%;
   max-width: 1500px; /* Optionally set a max-width */
 }
 
@@ -202,20 +203,20 @@ a {
   align-items: center; /* Vertically center the image */
   justify-content: center; /* Center horizontally in its container */
   margin: 10px;
-  margin-right: 20px;
+  margin-right: 50px;
 }
 
 .about-image img {
   /* width: 200px; Adjust size as needed */
-  height: 400px;
-  border-radius: 10%;
+  height: 300px;
+  /* border-radius: 10%; */
   object-fit: cover; /* Ensure the image covers the circle */
 }
 
 .about-image img:hover {
   /* width: 200px; Adjust size as needed */
-  height: 400px;
-  border-radius: 10%;
+  height: 300px;
+  /* border-radius: 10%; */
   object-fit: cover; /* Ensure the image covers the circle */
   animation: hueRotation 1s linear infinite;
 }
@@ -240,7 +241,7 @@ a {
 
 .ai-chatbot-btn {
   position: absolute;
-  bottom: 0;
+  bottom: 10%;
   right: 0;
   padding: 10px 20px;
   background-color: blueviolet;
@@ -255,14 +256,83 @@ a {
   background-color: darkviolet;
 }
 
+.what-i-do {
+  text-align: center;
+}
+
+.what-i-do h1 {
+  margin-bottom: 30px;
+  color: #8b8aff;
+}
+
+.skills h1 {
+  margin-bottom: 30px;
+  color: #8b8aff;
+}
+
+.card {
+  /* background-color: #1d1a45; */
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(77, 77, 85);
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 230px; /* Adjust the height as needed */
+}
+
+.card img {
+  max-width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  color: #dbdaff;
+  font-size: 16px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
 /* Media Query for Responsive Design */
 @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+
   .about-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
+  .ai-chatbot-btn {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 20px; /* Add margin for better spacing */
+    width: 100%; /* Make button full width */
+    text-align: center;
+  }
+
+  .navigation {
+    gap: 0px;
+    justify-content: center;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-right: 0;
+  }
   .about-image {
     margin-bottom: 20px; /* Adjust spacing as needed */
   }
@@ -389,6 +459,55 @@ a {
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.skills-section {
+  text-align: center;
+}
+
+.skills-section h1 {
+  margin-bottom: 30px;
+  color: #8b8aff;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill2,
+.skill {
+  background-color: transparent;
+  border: 2px solid #8b8aff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #8b8aff;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.skill2 {
+  border: 2px solid #c700e1;
+  color: #c700e1;
+}
+
+.skill2:hover {
+  background-color: #c700e1;
+  color: #0c0a2d;
+}
+
+.skill:hover {
+  background-color: #8b8aff;
+  color: #0c0a2d;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .project-box {
@@ -711,7 +830,7 @@ a {
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  margin-left: 200px;
+  /* margin-left: 200px; */
   margin-top: 100px; /* Optional: Adjust margin as needed */
 }
 
