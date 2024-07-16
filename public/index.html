@@ -19,7 +19,6 @@
   <body>
     <header>
       <div class="header-content">
-        <h1>Kenny Anaga Portfolio</h1>
         <nav class="navigation noto-sans-title">
           <a href="#about">About Me</a>
           <a href="#projects">Projects</a>
@@ -32,31 +31,37 @@
     <!-- Snap Container -->
     <div class="sectionz">
       <!-- HTML -->
-      <section
-        id="about-section"
-        class="about-section prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
-      >
-        <div class="about-container">
+      <section id="about-section" class="about-section">
+        <!-- prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert -->
+        <div
+          class="about-container prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+        >
           <div id="about-image" class="about-image jello">
             <img src="/photo.jpg" alt="Your Photo" />
           </div>
           <div class="about-text">
-            <h2>About Me</h2>
+            <h2 style="margin-bottom: 0; color: rgb(115, 0, 255)">
+              Kenny Anaga
+            </h2>
+            <h3 style="margin-top: 0; color: rgb(115, 0, 255)">
+              Bachelor of Computer Science
+            </h3>
             <p>
               Hi! my name is Kenny Anaga. As an IT enthusiast, I concentrate on
               various <strong>technology-related projects</strong>, with a
               primary focus on
               <strong>Artificial Intelligence and Web Development</strong>.
             </p>
-            <h2>What I Do</h2>
+            <!-- <h2>What I Do</h2>
             <li>Building responsive web app</li>
             <li>Building personal AI chat assistant</li>
             <li>Training ML models for classification and detection tasks</li>
-            <li>Game Development : sprites and animations</li>
+            <li>Game Development : sprites and animations</li> -->
             <p>
               Apart from IT, I engage in hobbies such as chess, fishing, and
               gaming, which provide balance and inspiration 👍
             </p>
+            <button class="ai-chatbot-btn">AI Chatbot</button>
           </div>
         </div>
       </section>
@@ -272,7 +277,7 @@
         <span class="spanner"></span>
         <div class="gear gear1"></div>
         <div class="gear gear2"></div>
-        <span class="spanner"></span>
+        <!-- <span class="spanner"></span> -->
       </div>
 
       <section

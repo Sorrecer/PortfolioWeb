@@ -42,7 +42,7 @@ html {
 
 body {
   /* background-image: url("/bgcolor.jpg"); */
-  background-color: #151515;
+  background-color: #040012;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -76,7 +76,9 @@ section {
 
 .navigation {
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  margin-right: 5%;
+  gap: 50px;
 }
 
 /* Header */
@@ -131,7 +133,7 @@ a {
 }
 
 .container {
-  width: 800px;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,9 +176,14 @@ a {
 
 /* About Section */
 .about-section {
+  margin-top: 0;
+  margin-bottom: 0;
   display: flex;
   justify-content: center;
   padding: 50px; /* Add padding for better spacing */
+  border: 2px solid #333;
+  border-bottom: none;
+  border-top: none;
   /* margin-top: 50px; */
   /* margin-bottom: 50px; */
 }
@@ -229,6 +236,23 @@ a {
 
 .about-text h2 {
   font-size: 30px;
+}
+
+.ai-chatbot-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px 20px;
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ai-chatbot-btn:hover {
+  background-color: darkviolet;
 }
 
 /* Media Query for Responsive Design */
@@ -353,7 +377,7 @@ a {
 
 .divider {
   border-top: 1px solid #bbb;
-  margin: 10px 0;
+  margin: 0;
 }
 
 .skill-box {
@@ -594,7 +618,7 @@ a {
 }
 
 .animate-slide-from-down-and-fade-2 {
-  animation: slideFromDownAndFade 2s ease-in-out;
+  animation: slideFromDownAndFade 2s ease forwards;
 }
 
 .prose {
