@@ -1,33 +1,87 @@
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 .noto-sans-bold {
   font-family: "Noto Sans", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-variation-settings: "wdth" 100;
-}
-
-/* Regular */
+} /* Regular */
 .noto-sans-regular {
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
-}
-
-/* Thin */
+} /* Thin */
 .noto-sans-thin {
   font-family: "Noto Sans", sans-serif;
   font-weight: 100;
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
-
 .noto-sans-title {
   font-family: "Noto Sans", sans-serif;
   font-weight: 700; /* Berat font tebal untuk judul */
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }
-
 .noto-sans-paragraph {
   font-family: "Noto Sans", sans-serif;
   font-weight: 400; /* Berat font reguler untuk paragraf */
@@ -121,12 +175,11 @@ footer {
   margin: auto;
 }
 
-/* Section Headings */
+/* Section Headings
 section h2 {
   font-size: 1.5em;
   margin-bottom: 0.5em;
   font-family: Arial, sans-serif; /* Use custom font */
-}
 
 a {
   color: lightblue;
@@ -463,6 +516,7 @@ a {
 
 .skills-section {
   text-align: center;
+  width: 70%;
 }
 
 .skills-section h1 {
@@ -475,6 +529,7 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  width: 100%;
 }
 
 .skill2,
@@ -552,7 +607,6 @@ a {
   }
 }
 
-/* Center h2 in the projects section */
 #projects h2 {
   text-align: center;
   margin-bottom: 1em; /* Adjust spacing below the heading if needed */
@@ -756,7 +810,7 @@ a {
 /* tombol ai chat  */
 .cta {
   position: fixed; /* Position fixed to keep it in view */
-  left: 0; /* Align with the left edge of the viewport */
+  left: 2%; /* Align with the left edge of the viewport */
   bottom: 20px; /* Adjust as needed for vertical position */
   z-index: 999; /* Ensure it's above other content */
   display: flex;
@@ -830,8 +884,6 @@ a {
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  /* margin-left: 200px; */
-  margin-top: 100px; /* Optional: Adjust margin as needed */
 }
 
 /* Chat Widget */
@@ -899,23 +951,15 @@ a {
 .more-info-section {
   background-color: rgba(0, 0, 0, 0); /* Dark semi-transparent background */
   color: #e5e7eb;
-  /* padding: 20px; Spacing inside the section */
   text-align: center;
-  /* margin: 20px auto; */
   border-radius: 10px;
   height: fit-content;
   width: 90%;
   max-width: 1200px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer; /* Pointer cursor for clickable element */
   transition: all 0.3s ease; /* Smooth transition for hover effect */
+  margin: 0 auto; /* Center the section horizontally */
 }
-
-/* CTA Animation on Hover
-.more-info-section:hover {
-  animation: cta 0.6s ease-in-out;
-  background-color: rgba(0, 0, 0, 0.9); /* Slightly darker on hover */
-/* color: aqua; */
 
 /* Input Container */
 .input-container {
@@ -1257,9 +1301,6 @@ h1 {
   position: relative;
   width: 200px;
   height: 200px;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   cursor: pointer;
 }
 

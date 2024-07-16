@@ -10,8 +10,18 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- noto sans -->
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ubuntu -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -28,456 +38,454 @@
       </div>
     </header>
 
-    <!-- Snap Container -->
-    <div class="sectionz">
-      <!-- HTML -->
-      <section id="about-section" class="about-section">
-        <!-- prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert -->
-        <div
-          class="about-container prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
-        >
-          <div id="about-image" class="about-image jello">
-            <img src="/photo.jpg" alt="Your Photo" />
-          </div>
-          <div class="about-text">
-            <h2 style="margin-bottom: 0; color: #8b8aff">Kenny Anaga</h2>
-            <h3 style="margin-top: 0; color: #8b8aff">
-              Bachelor of Computer Science
-            </h3>
-            <p>
-              Hi! my name is Kenny Anaga. As an IT enthusiast, I concentrate on
-              various <strong>technology-related projects</strong>, with a
-              primary focus on
-              <strong>Artificial Intelligence and Web Development</strong>.
-            </p>
-            <!-- <h2>What I Do</h2>
+    <!-- HTML -->
+    <section id="about-section" class="about-section">
+      <!-- prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert -->
+      <div
+        class="about-container prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+      >
+        <div id="about-image" class="about-image jello">
+          <img src="/photo.jpg" alt="Your Photo" />
+        </div>
+        <div class="about-text">
+          <h2
+            class="ubuntu-light"
+            style="margin-bottom: 0; color: #8b8aff; font-size: 40px"
+          >
+            Kenny Anaga
+          </h2>
+          <h3 class="ubuntu-light" style="margin-top: 0; color: #8b8aff">
+            Bachelor of Computer Science
+          </h3>
+          <p class="oppins-thin">
+            Hi! my name is Kenny Anaga. As an IT enthusiast, I concentrate on
+            various <strong>technology-related projects</strong>, with a primary
+            focus on
+            <strong>Artificial Intelligence and Web Development</strong>.
+          </p>
+          <!-- <h2>What I Do</h2>
             <li>Building responsive web app</li>
             <li>Building personal AI chat assistant</li>
             <li>Training ML models for classification and detection tasks</li>
             <li>Game Development : sprites and animations</li> -->
-            <p>
-              Apart from IT, I engage in hobbies such as chess, fishing, and
-              gaming, which provide balance and inspiration 👍
-            </p>
-          </div>
-          <button class="ai-chatbot-btn">AI Chatbot</button>
+          <p>
+            Apart from IT, I engage in hobbies such as chess, fishing, and
+            gaming, which provide balance and inspiration 👍
+          </p>
         </div>
-      </section>
+        <button class="ai-chatbot-btn">AI Chatbot</button>
+      </div>
+    </section>
 
-      <div class="divider" style="border-top: 1px solid #313131"></div>
+    <div class="divider" style="border-top: 1px solid #313131"></div>
 
-      <section class="what-i-do">
-        <h1>What I do</h1>
-        <div class="container noto-sans-thin">
-          <div class="card">
-            <img src="/laptop.svg" alt="Building responsive web app" />
-            <p>Building responsive web app</p>
-          </div>
-          <div class="card">
-            <img src="/chat.svg" alt="Building personal AI chat assistant" />
-            <p>Building personal AI chat assistant</p>
-          </div>
-          <div class="card">
-            <img src="/robot.svg" alt="Training ML models" />
-            <p>Training ML models for classification and detection tasks</p>
-          </div>
-          <div class="card">
-            <img
-              src="/game.svg"
-              alt="Game Development, sprites and animations"
-            />
-            <p>Game Development, sprites and animations</p>
-          </div>
+    <section class="what-i-do">
+      <h1>What I do</h1>
+      <div class="container noto-sans-thin">
+        <div class="card">
+          <img src="/laptop.svg" alt="Building responsive web app" />
+          <p>Building responsive web app</p>
         </div>
-      </section>
-
-      <div class="divider" style="border-top: 1px solid #313131"></div>
-
-      <section class="skills-section">
-        <h1>Skills</h1>
-        <div class="skills-container">
-          <div class="skill">Artificial Intelligence</div>
-          <div class="skill">Web Development</div>
-          <div class="skill">Object Detection</div>
-          <div class="skill">Machine Learning</div>
-          <div class="skill">Sprites & Animations</div>
-          <div class="skill">Game Development</div>
-          <div class="skill">Graphic Design</div>
-          <div class="skill">Pixel Art</div>
+        <div class="card">
+          <img src="/chat.svg" alt="Building personal AI chat assistant" />
+          <p>Building personal AI chat assistant</p>
         </div>
-        <h1 style="margin-top: 50px">Technologies</h1>
-        <div class="skills-container">
-          <div class="skill2">Python</div>
-          <div class="skill2">C/C++</div>
-          <div class="skill2">HTML</div>
-          <div class="skill2">CSS</div>
-          <div class="skill2">JavaScript</div>
-          <div class="skill2">PHP</div>
-          <div class="skill2">MySQL</div>
-          <div class="skill2">Node.js</div>
-          <div class="skill2">Git</div>
-          <div class="skill2">CodeIgniter 4</div>
-          <div class="skill2">Google Gemini</div>
-          <div class="skill2">Google Colab</div>
-          <div class="skill2">YOLOv8</div>
-          <div class="skill2">Adobe Photoshop</div>
-          <div class="skill2">Microsoft Office</div>
+        <div class="card">
+          <img src="/robot.svg" alt="Training ML models" />
+          <p>Training ML models for classification and detection tasks</p>
         </div>
-      </section>
+        <div class="card">
+          <img src="/game.svg" alt="Game Development, sprites and animations" />
+          <p>Game Development, sprites and animations</p>
+        </div>
+      </div>
+    </section>
 
-      <div class="divider" style="border-top: 1px solid #313131"></div>
-      <!-- Projects Section HTML -->
-      <section
-        id="projects"
-        class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
-      >
-        <h2 style="text-align: center; color: #8b8aff">Projects</h2>
-        <div class="slideshow-container noto-sans-title">
-          <!-- Slide 1 -->
-          <div class="mySlides fade">
-            <div
-              class="project-card"
-              id="project1"
-              style="background-image: url('proj1.jpg')"
-            >
-              <div class="project-details">
-                <h3 class="project-title">
-                  Localization of Commercial Vehicle Plate Number with YOLOv8
-                  and Bayesian Optimization
-                </h3>
-              </div>
-              <div class="project-image">
-                <!-- <img
+    <div class="divider" style="border-top: 1px solid #313131"></div>
+
+    <section class="skills-section">
+      <h1>Skills</h1>
+      <div class="skills-container">
+        <div class="skill">Artificial Intelligence</div>
+        <div class="skill">Web Development</div>
+        <div class="skill">Object Detection</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">Sprites & Animations</div>
+        <div class="skill">Game Development</div>
+        <div class="skill">Graphic Design</div>
+        <div class="skill">Pixel Art</div>
+      </div>
+      <h1 style="margin-top: 50px">Technologies</h1>
+      <div class="skills-container">
+        <div class="skill2">Python</div>
+        <div class="skill2">C/C++</div>
+        <div class="skill2">HTML</div>
+        <div class="skill2">CSS</div>
+        <div class="skill2">JavaScript</div>
+        <div class="skill2">PHP</div>
+        <div class="skill2">MySQL</div>
+        <div class="skill2">Node.js</div>
+        <div class="skill2">Git</div>
+        <div class="skill2">CodeIgniter 4</div>
+        <div class="skill2">Google Gemini</div>
+        <div class="skill2">Google Colab</div>
+        <div class="skill2">YOLOv8</div>
+        <div class="skill2">Adobe Photoshop</div>
+        <div class="skill2">Microsoft Office</div>
+      </div>
+    </section>
+
+    <div class="divider" style="border-top: 1px solid #313131"></div>
+    <!-- Projects Section HTML -->
+    <section
+      id="projects"
+      class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+    >
+      <h2 style="text-align: center; color: #8b8aff">Projects</h2>
+      <div class="slideshow-container noto-sans-title">
+        <!-- Slide 1 -->
+        <div class="mySlides fade">
+          <div
+            class="project-card"
+            id="project1"
+            style="background-image: url('proj1.jpg')"
+          >
+            <div class="project-details">
+              <h3 class="project-title">
+                Localization of Commercial Vehicle Plate Number with YOLOv8 and
+                Bayesian Optimization
+              </h3>
+            </div>
+            <div class="project-image">
+              <!-- <img
              src="/proj1.png"
              alt="Project 1 Image"
            /> -->
-              </div>
-            </div>
-            <div
-              class="project-card"
-              id="project2"
-              style="background-image: url('proj2.jpg')"
-            >
-              <div class="project-details">
-                <h3 class="project-title">Legend of Pandawa</h3>
-                <!-- <p>Description of project 2.</p> -->
-              </div>
-              <div class="project-image">
-                <!-- <img src="/proj2.png" alt="Project 2 Image" /> -->
-              </div>
-            </div>
-            <div
-              class="project-card"
-              id="project3"
-              style="background-image: url('proj3.jpg')"
-            >
-              <div class="project-details">
-                <h3 class="project-title">Inventaris Pika</h3>
-                <!-- <p>Description of project 3.</p> -->
-              </div>
-              <div class="project-image">
-                <!-- <img src="/proj3.png" alt="Project 3 Image" /> -->
-              </div>
-            </div>
-            <div
-              class="project-card"
-              id="project4"
-              style="background-image: url('proj4.jpg')"
-            >
-              <div class="project-details">
-                <h3 class="project-title">
-                  Efficient Computation of Mandelbrot Set Generation with
-                  Compute Unified Device Architecture (CUDA)
-                </h3>
-                <!-- <p>Description of project 4.</p> -->
-              </div>
-              <div class="project-image">
-                <!-- <img src="/proj4.png" alt="Project 4 Image" /> -->
-              </div>
             </div>
           </div>
-
-          <!-- Slide 2 -->
-          <div class="mySlides fade">
-            <div
-              class="project-card"
-              id="project5"
-              style="background-image: url('proj5.jpg')"
-            >
-              <div class="project-details">
-                <h3 class="project-title">Pony Town AI Bot</h3>
-                <!-- <p>Description of project 5.</p> -->
-              </div>
-              <div class="project-image">
-                <!-- <img src="/proj5.png" alt="Project 5 Image" /> -->
-              </div>
+          <div
+            class="project-card"
+            id="project2"
+            style="background-image: url('proj2.jpg')"
+          >
+            <div class="project-details">
+              <h3 class="project-title">Legend of Pandawa</h3>
+              <!-- <p>Description of project 2.</p> -->
             </div>
-            <div
-              class="project-card"
-              id="project6"
-              style="background-image: url('proj6.jpg')"
-            >
-              <div class="project-details">
-                <h3 class="project-title">Portfolio Web</h3>
-                <!-- <p>Description of project 6.</p> -->
-              </div>
-              <div class="project-image">
-                <!-- <img src="/proj6.png" alt="Project 6 Image" /> -->
-              </div>
-            </div>
-            <div
-              class="project-card"
-              id="project7"
-              style="background-image: url('proj7.jpg')"
-            >
-              <div class="project-details">
-                <h3 class="project-title">Wordmaster</h3>
-                <!-- <p>Description of project 7.</p> -->
-              </div>
-              <div class="project-image">
-                <!-- <img src="/proj7.png" alt="Project 7 Image" /> -->
-              </div>
-            </div>
-            <div
-              class="project-card"
-              id="project8"
-              style="background-image: url('proj8.png')"
-            >
-              <div class="project-details">
-                <h3 class="project-title">Solo Budaya</h3>
-                <!-- <p>Description of project 8.</p> -->
-              </div>
-              <div class="project-image">
-                <!-- <img src="/proj8.png" alt="Project 8 Image" /> -->
-              </div>
+            <div class="project-image">
+              <!-- <img src="/proj2.png" alt="Project 2 Image" /> -->
             </div>
           </div>
-
-          <!-- Slide 3 -->
-          <div class="mySlides fade">
-            <div
-              class="project-card"
-              id="project9"
-              style="background-image: url('proj9.png')"
-            >
-              <div class="project-details">
-                <h3 class="project-title">Shark Bounce Ball</h3>
-                <!-- <p>Description of project 9.</p> -->
-              </div>
-              <div class="project-image">
-                <!-- <img src="/proj9.png" alt="Project 9 Image" /> -->
-              </div>
+          <div
+            class="project-card"
+            id="project3"
+            style="background-image: url('proj3.jpg')"
+          >
+            <div class="project-details">
+              <h3 class="project-title">Inventaris Pika</h3>
+              <!-- <p>Description of project 3.</p> -->
             </div>
-            <div
-              class="project-card"
-              id="project10"
-              style="background-image: url('proj10.jpg')"
-            >
-              <div class="project-details">
-                <h3 class="project-title">Sin Confession</h3>
-                <!-- <p>Description of project 10.</p> -->
-              </div>
-              <div class="project-image">
-                <!-- <img src="/proj10.png" alt="Project 10 Image" /> -->
-              </div>
-            </div>
-            <div
-              class="project-card"
-              id="project11"
-              style="background-image: url('proj11.jpg')"
-            >
-              <div class="project-details">
-                <h3 class="project-title">Kenny Lib</h3>
-                <!-- <p>Description of project 11.</p> -->
-              </div>
-              <div class="project-image">
-                <!-- <img src="/proj11.png" alt="Project 11 Image" /> -->
-              </div>
-            </div>
-            <div
-              class="project-card"
-              id="project12"
-              style="background-image: url('proj12.jpg')"
-            >
-              <div class="project-details">
-                <h3 class="project-title">Legend of Pandawa:Remaster</h3>
-                <!-- <p>Description of project 12.</p> -->
-              </div>
-              <div class="project-image">
-                <!-- <img src="/proj12.png" alt="Project 12 Image" /> -->
-              </div>
+            <div class="project-image">
+              <!-- <img src="/proj3.png" alt="Project 3 Image" /> -->
             </div>
           </div>
-
-          <!-- Next and previous buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div
+            class="project-card"
+            id="project4"
+            style="background-image: url('proj4.jpg')"
+          >
+            <div class="project-details">
+              <h3 class="project-title">
+                Efficient Computation of Mandelbrot Set Generation with Compute
+                Unified Device Architecture (CUDA)
+              </h3>
+              <!-- <p>Description of project 4.</p> -->
+            </div>
+            <div class="project-image">
+              <!-- <img src="/proj4.png" alt="Project 4 Image" /> -->
+            </div>
+          </div>
         </div>
 
-        <!-- The dots/circles -->
-        <div style="text-align: center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+        <!-- Slide 2 -->
+        <div class="mySlides fade">
+          <div
+            class="project-card"
+            id="project5"
+            style="background-image: url('proj5.jpg')"
+          >
+            <div class="project-details">
+              <h3 class="project-title">Pony Town AI Bot</h3>
+              <!-- <p>Description of project 5.</p> -->
+            </div>
+            <div class="project-image">
+              <!-- <img src="/proj5.png" alt="Project 5 Image" /> -->
+            </div>
+          </div>
+          <div
+            class="project-card"
+            id="project6"
+            style="background-image: url('proj6.jpg')"
+          >
+            <div class="project-details">
+              <h3 class="project-title">Portfolio Web</h3>
+              <!-- <p>Description of project 6.</p> -->
+            </div>
+            <div class="project-image">
+              <!-- <img src="/proj6.png" alt="Project 6 Image" /> -->
+            </div>
+          </div>
+          <div
+            class="project-card"
+            id="project7"
+            style="background-image: url('proj7.jpg')"
+          >
+            <div class="project-details">
+              <h3 class="project-title">Wordmaster</h3>
+              <!-- <p>Description of project 7.</p> -->
+            </div>
+            <div class="project-image">
+              <!-- <img src="/proj7.png" alt="Project 7 Image" /> -->
+            </div>
+          </div>
+          <div
+            class="project-card"
+            id="project8"
+            style="background-image: url('proj8.png')"
+          >
+            <div class="project-details">
+              <h3 class="project-title">Solo Budaya</h3>
+              <!-- <p>Description of project 8.</p> -->
+            </div>
+            <div class="project-image">
+              <!-- <img src="/proj8.png" alt="Project 8 Image" /> -->
+            </div>
+          </div>
         </div>
-      </section>
 
-      <div id="project-overlay" class="project-overlay">
-        <div class="project-box">
-          <button id="close-project-box" class="close-button">X</button>
-          <div id="project-content">
-            <!-- Project details will be injected here -->
+        <!-- Slide 3 -->
+        <div class="mySlides fade">
+          <div
+            class="project-card"
+            id="project9"
+            style="background-image: url('proj9.png')"
+          >
+            <div class="project-details">
+              <h3 class="project-title">Shark Bounce Ball</h3>
+              <!-- <p>Description of project 9.</p> -->
+            </div>
+            <div class="project-image">
+              <!-- <img src="/proj9.png" alt="Project 9 Image" /> -->
+            </div>
+          </div>
+          <div
+            class="project-card"
+            id="project10"
+            style="background-image: url('proj10.jpg')"
+          >
+            <div class="project-details">
+              <h3 class="project-title">Sin Confession</h3>
+              <!-- <p>Description of project 10.</p> -->
+            </div>
+            <div class="project-image">
+              <!-- <img src="/proj10.png" alt="Project 10 Image" /> -->
+            </div>
+          </div>
+          <div
+            class="project-card"
+            id="project11"
+            style="background-image: url('proj11.jpg')"
+          >
+            <div class="project-details">
+              <h3 class="project-title">Kenny Lib</h3>
+              <!-- <p>Description of project 11.</p> -->
+            </div>
+            <div class="project-image">
+              <!-- <img src="/proj11.png" alt="Project 11 Image" /> -->
+            </div>
+          </div>
+          <div
+            class="project-card"
+            id="project12"
+            style="background-image: url('proj12.jpg')"
+          >
+            <div class="project-details">
+              <h3 class="project-title">Legend of Pandawa:Remaster</h3>
+              <!-- <p>Description of project 12.</p> -->
+            </div>
+            <div class="project-image">
+              <!-- <img src="/proj12.png" alt="Project 12 Image" /> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <!-- The dots/circles -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </section>
+
+    <div id="project-overlay" class="project-overlay">
+      <div class="project-box">
+        <button id="close-project-box" class="close-button">X</button>
+        <div id="project-content">
+          <!-- Project details will be injected here -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container gears">
+      <span class="spanner"></span>
+      <div class="gear gear1"></div>
+      <div class="gear gear2"></div>
+      <!-- <span class="spanner"></span> -->
+    </div>
+
+    <section
+      id="experience"
+      class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+    >
+      <h2 style="text-align: center">Experience, Honors, and Awards</h2>
+      <ul class="noto-sans-bold">
+        <h1 style="display: flex; align-items: flex-start">2022</h1>
+        <li>Web App Developer at SMK Pika Semarang</li>
+        <li>
+          Graphic and Visual Computing Practicum Assistant at Diponegoro
+          University
+        </li>
+        <h1 style="display: flex; align-items: flex-start">2021</h1>
+        <li>Finalist of GEMASTIK XIV: Game Development</li>
+        <li>
+          Algorithm and Programming Practicum Asistant at Diponegoro University
+        </li>
+        <h1 style="display: flex; align-items: flex-start">2020</h1>
+        <li>
+          Lead Coordinator of Media and Information Division at Voice of
+          Sciences Choir, Faculty of Science and Mathematic · 2020 - 2021
+        </li>
+      </ul>
+    </section>
+
+    <div class="divider" style="border-top: 1px solid #313131"></div>
+
+    <!-- more info -->
+    <section id="more-info" class="more-info-section noto-sans-bold">
+      <div class="contact-button-container">
+        <div id="contact-button" class="letter-image">
+          <div class="animated-mail">
+            <div class="back-fold"></div>
+            <div class="letter">
+              <div class="letter-border"></div>
+              <div class="letter-title"></div>
+              <div class="letter-context"></div>
+              <div class="letter-stamp">
+                <div class="letter-stamp-inner"></div>
+              </div>
+            </div>
+            <div class="top-fold"></div>
+            <div class="body"></div>
+            <div class="left-fold"></div>
+          </div>
+          <div class="shadow">
+            <p style="font-size: 20px">🐣 Contact Me!</p>
           </div>
         </div>
       </div>
-
-      <div class="container gears">
-        <span class="spanner"></span>
-        <div class="gear gear1"></div>
-        <div class="gear gear2"></div>
-        <!-- <span class="spanner"></span> -->
-      </div>
-
-      <section
-        id="experience"
-        class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
-      >
-        <h2 style="text-align: center">Experience, Honors, and Awards</h2>
-        <ul class="noto-sans-bold">
-          <h1 style="display: flex; align-items: flex-start">2022</h1>
-          <li>Web App Developer at SMK Pika Semarang</li>
-          <li>
-            Graphic and Visual Computing Practicum Assistant at Diponegoro
-            University
-          </li>
-          <h1 style="display: flex; align-items: flex-start">2021</h1>
-          <li>Finalist of GEMASTIK XIV: Game Development</li>
-          <li>
-            Algorithm and Programming Practicum Asistant at Diponegoro
-            University
-          </li>
-          <h1 style="display: flex; align-items: flex-start">2020</h1>
-          <li>
-            Lead Coordinator of Media and Information Division at Voice of
-            Sciences Choir, Faculty of Science and Mathematic · 2020 - 2021
-          </li>
-        </ul>
-      </section>
-
-      <div class="divider" style="border-top: 1px solid #313131"></div>
-
-      <!-- more info -->
-      <section id="more-info" class="more-info-section noto-sans-bold">
-        <div class="contact-button-container">
-          <div id="contact-button" class="letter-image">
-            <div class="animated-mail">
-              <div class="back-fold"></div>
-              <div class="letter">
-                <div class="letter-border"></div>
-                <div class="letter-title"></div>
-                <div class="letter-context"></div>
-                <div class="letter-stamp">
-                  <div class="letter-stamp-inner"></div>
-                </div>
-              </div>
-              <div class="top-fold"></div>
-              <div class="body"></div>
-              <div class="left-fold"></div>
-            </div>
-            <div class="shadow">
-              <p style="font-size: 20px">🐣 Contact Me!</p>
-            </div>
-          </div>
-        </div>
-        <p>
-          Other informations about me are stored in the AI chat
-          <!-- Need more details or have questions? Chat with my AI assistant for
+      <p style="margin-top: 100px">
+        Other informations about me are stored in the AI chat
+        <!-- Need more details or have questions? Chat with my AI assistant for
         instant help! -->
-        </p>
-        <p>👈 Feel free to ask the AI</p>
-      </section>
+      </p>
+      <p>👈 Feel free to ask the AI</p>
+    </section>
 
-      <footer
-        class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
-      >
-        <p>© 2024 Kenny Anaga</p>
-      </footer>
+    <footer
+      class="prose prose-zinc animate-slide-from-down-and-fade-2 dark:prose-invert"
+    >
+      <p>© 2024 Kenny Anaga</p>
+    </footer>
 
-      <button class="cta">
+    <button class="cta">
+      <span>AI Chatbot</span>
+      <svg width="15px" height="10px" viewBox="0 0 13 10">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+    </button>
+
+    <!-- Chat Widget -->
+    <div id="chat-widget" class="hidden">
+      <div id="chat-header" class="noto-sans-bold">
         <span>AI Chatbot</span>
-        <svg width="15px" height="10px" viewBox="0 0 13 10">
-          <path d="M1,5 L11,5"></path>
-          <polyline points="8 1 12 5 8 9"></polyline>
-        </svg>
-      </button>
-
-      <!-- Chat Widget -->
-      <div id="chat-widget" class="hidden">
-        <div id="chat-header" class="noto-sans-bold">
-          <span>AI Chatbot</span>
-          <button id="close-chat">&times;</button>
-        </div>
-
-        <!-- User Info Form -->
-        <div id="user-info-form" class="user-info-form">
-          <input type="text" id="user-name" placeholder="Name" />
-          <input type="email" id="user-email" placeholder="Email (Optional)" />
-          <button id="submit-info">Start Chat</button>
-        </div>
-
-        <!-- Suggestion Buttons -->
-        <div id="suggestion-buttons" class="suggestion-buttons">
-          <button class="suggestion-button noto-sans-bold">
-            <span class="emoji">🧑</span> Who is Kenny Anaga?
-          </button>
-          <button class="suggestion-button noto-sans-bold">
-            <span class="emoji">📄</span> Tell me about Kenny's CV
-          </button>
-          <button class="suggestion-button noto-sans-bold">
-            <span class="emoji">📝</span> Kenny's projects
-          </button>
-        </div>
-
-        <div id="chatbox" class="noto-sans-bold"></div>
-        <div class="input-container noto-sans-bold">
-          <input type="text" id="user-input" placeholder="Ask me anything!" />
-          <button id="send-button">Send</button>
-        </div>
+        <button id="close-chat">&times;</button>
       </div>
 
-      <div id="contact-widget" class="hidden">
-        <div id="chat-header" class="noto-sans-bold">
-          <span>Contact me!</span>
-          <button id="close-chat">&times;</button>
-        </div>
-        <div id="contact-body">
-          <div id="contact-form" class="contact-form">
-            <label for="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name"
-              required
-            />
-            <label for="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              required
-            />
-            <label for="message">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="10"
-              placeholder="Message"
-              required
-            ></textarea>
-            <button type="submit">Send</button>
-          </div>
+      <!-- User Info Form -->
+      <div id="user-info-form" class="user-info-form">
+        <input type="text" id="user-name" placeholder="Name" />
+        <input type="email" id="user-email" placeholder="Email (Optional)" />
+        <button id="submit-info">Start Chat</button>
+      </div>
+
+      <!-- Suggestion Buttons -->
+      <div id="suggestion-buttons" class="suggestion-buttons">
+        <button class="suggestion-button noto-sans-bold">
+          <span class="emoji">🧑</span> Who is Kenny Anaga?
+        </button>
+        <button class="suggestion-button noto-sans-bold">
+          <span class="emoji">📄</span> Tell me about Kenny's CV
+        </button>
+        <button class="suggestion-button noto-sans-bold">
+          <span class="emoji">📝</span> Kenny's projects
+        </button>
+      </div>
+
+      <div id="chatbox" class="noto-sans-bold"></div>
+      <div class="input-container noto-sans-bold">
+        <input type="text" id="user-input" placeholder="Ask me anything!" />
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+
+    <div id="contact-widget" class="hidden">
+      <div id="chat-header" class="noto-sans-bold">
+        <span>Contact me!</span>
+        <button id="close-chat">&times;</button>
+      </div>
+      <div id="contact-body">
+        <div id="contact-form" class="contact-form">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name"
+            required
+          />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="10"
+            placeholder="Message"
+            required
+          ></textarea>
+          <button type="submit">Send</button>
         </div>
       </div>
     </div>
