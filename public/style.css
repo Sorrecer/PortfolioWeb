@@ -226,7 +226,7 @@ a {
   flex-direction: row;
   align-items: center; /* Center items vertically */
   gap: 20px; /* Adjust gap as needed */
-  width: 100%;
+  width: 80%;
   max-width: 1500px; /* Optionally set a max-width */
 }
 
@@ -235,7 +235,6 @@ a {
   align-items: center; /* Vertically center the image */
   justify-content: center; /* Center horizontally in its container */
   margin: 10px;
-  margin-right: 50px;
 }
 
 .about-image img {
@@ -427,7 +426,7 @@ a {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 80%;
   position: relative;
   margin: auto;
 }
@@ -469,6 +468,7 @@ a {
 }
 
 /* Project Cards */
+
 .project-card {
   background-color: rgba(
     34,
@@ -476,8 +476,8 @@ a {
     34,
     0.1
   ); /* Dark semi-transparent background */
-  height: 150px;
-  padding: 1em;
+  height: 280px;
+  /* padding: 1em; */
   border-radius: 8px;
   box-sizing: border-box;
   color: #ffffff; /* Light text color */
@@ -490,12 +490,20 @@ a {
   overflow: hidden;
 }
 
-.project-details {
-  flex: 1; /* Take remaining space */
-  text-shadow: rgba(0, 0, 0, 0.9);
-  /* overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; */
+.project-title {
+  margin: 1em;
+  height: 9em;
+}
+
+.project-description {
+  background-color: rgba(0, 0, 0, 1); /* Black background for the description */
+  /* font-size: 4px; */
+  padding: 10px;
+  height: 40%;
+  border-bottom-left-radius: 8px; /* Match the border radius of the card */
+  border-bottom-right-radius: 8px;
+  color: #ffffff; /* Light text color */
+  /* text-align: center; Cente  r the description text */
 }
 
 .project-image {
@@ -647,13 +655,13 @@ a {
 /* Text within project cards */
 .project-card h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 0.9rem;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9); /* Text shadow */
 }
 
 .project-card p {
   margin: 0.5rem 0 0 0;
-  font-size: 1rem;
+  font-size: 16px;
   color: #d1d5db; /* Slightly lighter text color */
 }
 
@@ -670,15 +678,14 @@ a {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
   padding: 16px;
+  margin-top: -22px;
   color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
-  /* background-color: rgba(0, 0, 0, 0.4); */
 }
 
 /* Position the "next button" to the right */
