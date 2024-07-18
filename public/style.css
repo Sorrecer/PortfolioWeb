@@ -505,6 +505,7 @@ a {
   border-bottom-right-radius: 8px;
   color: #ffffff; /* Light text color */
   bottom: 0;
+  border-bottom: 2px solid rgb(194, 194, 194);
   /* text-align: center; Cente  r the description text */
 }
 
