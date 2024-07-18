@@ -240,7 +240,8 @@ a {
 .about-image img {
   /* width: 200px; Adjust size as needed */
   height: 300px;
-  /* border-radius: 10%; */
+  border-radius: 10%;
+  border: 3px solid white;
   object-fit: cover; /* Ensure the image covers the circle */
 }
 
@@ -469,25 +470,25 @@ a {
 
 /* Project Cards */
 
+/* Project Cards */
 .project-card {
-  background-color: rgba(
-    34,
-    34,
-    34,
-    0.1
-  ); /* Dark semi-transparent background */
-  height: 280px;
-  /* padding: 1em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* background-color: rgba(255, 141, 255, 0.895); */
+  padding: 0;
   border-radius: 8px;
   box-sizing: border-box;
-  color: #ffffff; /* Light text color */
+  color: #ffffff;
   text-shadow: rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Deeper shadow */
-  text-decoration: none; /* Remove default link styles */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  background-size: cover; /* Ensure the background image covers the entire card */
-  background-position: center; /* Center the background image */
+  background-size: cover;
+  background-position: center;
   overflow: hidden;
+  min-height: 280px;
+  position: relative;
 }
 
 .project-title {
@@ -499,21 +500,12 @@ a {
   background-color: rgba(0, 0, 0, 1); /* Black background for the description */
   /* font-size: 4px; */
   padding: 10px;
-  height: 40%;
+  height: fit-content;
   border-bottom-left-radius: 8px; /* Match the border radius of the card */
   border-bottom-right-radius: 8px;
   color: #ffffff; /* Light text color */
+  bottom: 0;
   /* text-align: center; Cente  r the description text */
-}
-
-.project-image {
-  margin-left: 1em; /* Adjust spacing between image and details */
-}
-
-.project-image img {
-  width: 80px; /* Adjust the width of the image */
-  height: 80px; /* Adjust the height of the image */
-  border-radius: 50%; /* Make the image circular */
 }
 
 /* Project Overlay */
@@ -534,6 +526,7 @@ a {
 .divider {
   border-top: 1px solid #bbb;
   margin: 0;
+  margin-bottom: 30px;
 }
 
 .skill-box {
@@ -791,7 +784,7 @@ a {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #9a9a9a;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -799,7 +792,7 @@ a {
 
 .active,
 .dot:hover {
-  background-color: #717171;
+  background-color: #f3f3f3;
 }
 
 /* Fading animation */

@@ -351,7 +351,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       } else if (projectId === "project5") {
         projectContentHtml = `
-          <h2>Project2</h2>
+          <h2>Pony Town AI Bot</h2>
           <h4 style="color:gray">2024</h4>
           <div class="divider"></div>
           <p class="noto-sans-bold">Skills and Techs</p>
