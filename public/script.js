@@ -60,6 +60,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
   showSlides(slideIndex);
 
+  // Touch events for mobile
+  let startX;
+  let startY;
+  const threshold = 100; // Minimum distance for a swipe
+  const slidesContainer = document.querySelector(".slideshow-container");
+
+  slidesContainer.addEventListener("touchstart", handleTouchStart, false);
+  slidesContainer.addEventListener("touchmove", handleTouchMove, false);
+
+  function handleTouchStart(evt) {
+    const firstTouch = evt.touches[0];
+    startX = firstTouch.clientX;
+    startY = firstTouch.clientY;
+  }
+
+  function handleTouchMove(evt) {
+    if (!startX || !startY) {
+      return;
+    }
+
+    const currentX = evt.touches[0].clientX;
+    const currentY = evt.touches[0].clientY;
+
+    const diffX = startX - currentX;
+    const diffY = startY - currentY;
+
+    // Check for horizontal swipe
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      if (Math.abs(diffX) > threshold) {
+        if (diffX > 0) {
+          // Swipe left
+          plusSlides(1);
+        } else {
+          // Swipe right
+          plusSlides(-1);
+        }
+        startX = null;
+        startY = null;
+      }
+    }
+  }
+
   var gear1 = document.querySelector(".gear1").style;
   gear2 = document.querySelector(".gear2").style;
   window.onscroll = function rotateGear() {
