@@ -418,118 +418,6 @@ a {
   }
 }
 
-* {
-  box-sizing: border-box;
-  /* border: 1px solid red; This will highlight all elements */
-  margin: 0;
-  padding: 0;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 80%;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1em;
-}
-
-/* Projects */
-.project-slider {
-  overflow: hidden;
-}
-
-.project-list {
-  display: flex;
-  flex-wrap: wrap; /* Enable wrapping for grid layout */
-  transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 1em;
-  min-width: 100%;
-  box-sizing: border-box;
-}
-
-.project-slide {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns */
-  grid-template-rows: 1fr 1fr; /* Two rows */
-  gap: 1em;
-  flex: 1 0 100%; /* Each slide takes full width */
-}
-
-/* Project Cards */
-
-/* Project Cards */
-.project-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  /* background-color: rgba(255, 141, 255, 0.895); */
-  padding: 0;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #ffffff;
-  text-shadow: rgba(0, 0, 0, 0.4);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  text-decoration: none;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  min-height: 280px;
-  position: relative;
-}
-
-.project-title {
-  margin: 1em;
-  height: 9em;
-}
-
-.project-description {
-  background-color: rgba(0, 0, 0, 1); /* Black background for the description */
-  /* font-size: 4px; */
-  padding: 10px;
-  height: fit-content;
-  border-bottom-left-radius: 8px; /* Match the border radius of the card */
-  border-bottom-right-radius: 8px;
-  color: #ffffff; /* Light text color */
-  bottom: 0;
-  border-bottom: 2px solid rgb(194, 194, 194);
-  /* text-align: center; Cente  r the description text */
-}
-
-/* Project Overlay */
-.project-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  overflow: auto; /* Ensure the overlay is scrollable */
-  z-index: 1000;
-}
-
-.divider {
-  border-top: 1px solid #bbb;
-  margin: 0;
-  margin-bottom: 30px;
-}
-
 .skill-box {
   display: inline-block;
   color: black;
@@ -599,6 +487,133 @@ a {
   }
 }
 
+* {
+  box-sizing: border-box;
+  /* border: 1px solid red; This will highlight all elements */
+  margin: 0;
+  padding: 0;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.mySlides.active {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-template-rows: repeat(2, 1fr); /* Two rows */
+  gap: 2em;
+  opacity: 1;
+  transform: translateX(
+    0
+  ); /* Ensure the active slide is in the correct position */
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media (min-width: 768px) {
+  .mySlides {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mySlides.active {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    gap: 0;
+  }
+}
+
+/* Projects */
+.project-slider {
+  overflow: hidden;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap; /* Enable wrapping for grid layout */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Project Cards */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgba(255, 141, 255, 0.895);
+  padding: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-shadow: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  min-height: 260px;
+  position: relative;
+  width: 100%;
+}
+
+#projects {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  /* min-height: 70vh; */
+}
+
+.project-title {
+  margin: 1em;
+  height: 9em;
+}
+
+.project-description {
+  background-color: rgba(0, 0, 0, 1);
+  padding: 10px;
+  height: fit-content;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  color: #ffffff;
+  bottom: 0;
+  /* border-bottom: 2px solid rgb(194, 194, 194); */
+}
+
+.project-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  z-index: 1000;
+}
+
+.divider {
+  border-top: 1px solid #bbb;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
 .project-box {
   background: rgba(0, 0, 0, 0.8);
   width: 80%;
@@ -606,20 +621,10 @@ a {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  max-height: 90%; /* Limit height to ensure it fits within the screen */
-  overflow: auto; /* Make the box scrollable if content exceeds the height */
+  max-height: 90%;
+  overflow: auto;
   animation: fadeIn 0.5s;
 }
-
-/* .project-box {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 2em;
-  border-radius: 8px;
-  max-width: 600px;
-  width: 100%;
-  box-sizing: border-box;
-  animation: fadeIn 0.5s;
-  overflow: auto; /* Make the box scrollable if content exceeds the height */
 
 .close-button {
   position: absolute;
@@ -643,26 +648,24 @@ a {
 
 #projects h2 {
   text-align: center;
-  margin-bottom: 1em; /* Adjust spacing below the heading if needed */
+  margin-bottom: 1em;
 }
 
-/* Text within project cards */
 .project-card h3 {
   margin: 0;
   font-size: 0.9rem;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9); /* Text shadow */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
 }
 
 .project-card p {
   margin: 0.5rem 0 0 0;
   font-size: 16px;
-  color: #d1d5db; /* Slightly lighter text color */
+  color: #d1d5db;
 }
 
-/* Hover Effect */
 .project-card:hover {
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 1); /* Stronger shadow on hover */
-  transform: translateY(-10px); /* Slight lift effect */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 1);
+  transform: translateY(-10px);
 }
 
 /* Next & previous buttons */
@@ -682,12 +685,13 @@ a {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: -50px;
+}
+.prev {
+  left: -50px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
@@ -705,14 +709,12 @@ a {
   border-radius: 8px;
 }
 
-/* Media query for larger screens
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .image-grid {
     grid-template-columns: 1fr 1fr;
   }
 } */
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -723,7 +725,6 @@ a {
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -732,30 +733,45 @@ a {
   top: 0;
 }
 
-/* Media Query for Two Columns Layout */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .project-card {
-    flex: 1 1 calc(50% - 1em); /* Two columns */
-    margin-bottom: 1em; /* Margin to separate rows */
+    flex: 1 1 calc(33.33% - 1em);
   }
-}
+  .slideshow-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+} */
 
-/* Responsive Design for smaller screens */
 @media (max-width: 768px) {
   .project-list {
-    gap: 0.75em; /* Slightly less gap on smaller screens */
+    gap: 0.75em;
   }
 
   .project-card {
-    padding: 0.75em;
+    width: 100%;
+    max-height: 100px;
+    /* aspect-ratio: 1 / 1; */
+  }
+
+  .project-title {
+    height: 0;
   }
 
   .project-card h3 {
-    font-size: 1.125rem;
+    font-size: 0.8rem;
   }
 
   .project-card p {
     font-size: 0.875rem;
+  }
+
+  .prev {
+    left: -10px;
+  }
+
+  .next {
+    right: -10px;
   }
 }
 
@@ -777,6 +793,11 @@ a {
 .dots {
   display: flex;
   gap: 0.5em;
+}
+
+.dots-container {
+  margin-top: 30px;
+  text-align: center;
 }
 
 /* The dots/bullets/indicators */

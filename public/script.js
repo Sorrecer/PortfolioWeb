@@ -21,32 +21,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const nextButton = document.querySelector(".next");
   let slideIndex = 1;
 
-  // Slideshow functionality
-  function showSlides(n) {
-    const slides = document.querySelectorAll(".mySlides");
-    if (n > slides.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = slides.length;
-    }
-    slides.forEach((slide, index) => {
-      slide.style.display = index + 1 === slideIndex ? "grid" : "none";
-    });
-    dots.forEach((dot, index) => {
-      dot.className = dot.className.replace(" active", "");
-      if (index + 1 === slideIndex) {
-        dot.className += " active";
-      }
-    });
-  }
-
   function plusSlides(n) {
     showSlides((slideIndex += n));
   }
 
   function currentSlide(n) {
     showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    for (let slide of slides) {
+      slide.classList.remove("active");
+    }
+
+    for (let dot of dots) {
+      dot.className = dot.className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].className += " active";
   }
 
   prevButton.addEventListener("click", () => plusSlides(-1));
