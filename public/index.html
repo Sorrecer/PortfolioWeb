@@ -1,5 +1,3 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -273,8 +271,8 @@
       </div>
 
       <!-- Next and previous buttons -->
-      <div class="prev" onclick="plusSlides(-1)">&lt;</div>
-      <div class="next" onclick="plusSlides(1)">&gt;</div>
+      <div class="prev" onclick="plusSlides(-1)"><</div>
+      <div class="next" onclick="plusSlides(1)">></div>
       <div class="dots-container">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
@@ -356,7 +354,7 @@
       <p style="margin-top: 100px">
         Other informations about me are stored in the AI chat
         <!-- Need more details or have questions? Chat with my AI assistant for
-        instant help! -->
+      instant help! -->
       </p>
       <p>👈 Feel free to ask the AI</p>
     </section>
@@ -379,7 +377,7 @@
     <div id="chat-widget" class="hidden">
       <div id="chat-header" class="noto-sans-bold">
         <span>AI Chatbot</span>
-        <button id="close-chat">&times;</button>
+        <button id="close-chat">×</button>
       </div>
 
       <!-- User Info Form -->
@@ -412,7 +410,7 @@
     <div id="contact-widget" class="hidden">
       <div id="chat-header" class="noto-sans-bold">
         <span>Contact me!</span>
-        <button id="close-chat">&times;</button>
+        <button id="close-contact-widget">×</button>
       </div>
       <div id="contact-body">
         <div id="contact-form" class="contact-form">
@@ -440,43 +438,12 @@
             placeholder="Message"
             required
           ></textarea>
-          <button type="submit">Send</button>
+          <button type="submit" id="send-contact-form">Send</button>
         </div>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <script src="chatscript.js"></script>
-    <!-- <script>
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", async (event) => {
-          event.preventDefault();
-
-          const formData = new FormData(event.target);
-          const data = {
-            name: formData.get("name"),
-            email: formData.get("email"),
-            message: formData.get("message"),
-          };
-
-          const response = await fetch("/contact", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-          });
-
-          if (response.ok) {
-            alert("Your message has been sent!");
-            event.target.reset();
-          } else {
-            alert(
-              "There was an error sending your message. Please try again later."
-            );
-          }
-        });
-    </script> -->
   </body>
 </html>

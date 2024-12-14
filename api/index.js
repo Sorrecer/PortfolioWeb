@@ -2,15 +2,14 @@ require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
-// const nodemailer = require("nodemailer");
+const nodemailer = require("nodemailer");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
-// Initialize express
 const app = express();
 
 // Middlewares
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "..", "public"))); // Menyajikan file statis dari direktori public
+app.use(express.static(path.join(__dirname, "..", "public")));
 
 // Configure Google Generative AI
 const apiKey = process.env.GEMINI_API_KEY;
@@ -98,41 +97,45 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
-// // Route to handle form submission
-// app.post("/contact", (req, res) => {
-//   const { name, email, message } = req.body;
+// Route to handle form submission
+app.post("/contact", async (req, res) => {
+  const { name, email, message } = req.body;
 
-//   // Set up the Nodemailer transporter
-//   const transporter = nodemailer.createTransport({
-//     service: "gmail",
-//     auth: {
-//       user: process.env.EMAIL_USER, // Retrieve from environment variables
-//       pass: process.env.EMAIL_PASS, // Retrieve from environment variables
-//     },
-//   });
+  console.log("EMAIL_USER:", process.env.EMAIL_USER);
+  // console.log("EMAIL_PASS:", process.env.EMAIL_PASS); // Remove in production
+  console.log("Received contact form data:", { name, email, message });
 
-//   const mailOptions = {
-//     from: email,
-//     to: process.env.EMAIL_USER, // Use the same email as the recipient
-//     subject: `Contact Form Submission from ${name}`,
-//     text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-//   };
+  try {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
 
-//   transporter.sendMail(mailOptions, (error, info) => {
-//     if (error) {
-//       console.error("Error sending email:", error);
-//       res.status(500).send("Error sending email");
-//     } else {
-//       console.log("Email sent:", info.response);
-//       res.status(200).send("Email sent");
-//     }
-//   });
-// });
+    const mailOptions = {
+      from: email,
+      to: process.env.EMAIL_USER,
+      subject: `Contact Form Submission from ${name}`,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+    };
 
-// Serve the HTML form
-// app.get("/", (req, res) => {
-//   res.sendFile(path.join(__dirname, "..", "public", "index.html"));
-// });
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent:", info.response);
+    res.status(200).json({ message: "Email sent successfully!" });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res
+      .status(500)
+      .json({ error: "Failed to send email", details: error.message });
+  }
+});
 
-// Export the serverless function
+// Serve the HTML form (this route might not be strictly necessary on Vercel)
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "public", "index.html"));
+});
+
+// Export the app for Vercel
 module.exports = app;

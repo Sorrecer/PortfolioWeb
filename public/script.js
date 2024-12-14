@@ -50,6 +50,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     slides[slideIndex - 1].classList.add("active");
     dots[slideIndex - 1].className += " active";
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+
+    for (let slide of slides) {
+      slide.classList.remove("active");
+    }
+
+    for (let dot of dots) {
+      dot.className = dot.className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].className += " active";
   }
 
   prevButton.addEventListener("click", () => plusSlides(-1));
