@@ -29,7 +29,7 @@ const model = genAI.getGenerativeModel({
     "Skill/Technical proficiencies Kenny dapat dilihat pada CV. Kenny mendapatkan pengalaman praktek magang di SMK PIKA Semarang. " +
     "pada praktek magang, Kenny membuat web aplikasi inventaris sekolah untuk mengelola aset sekolah. " +
     "Saat ini, saya tertarik untuk melanjutkan studi lebih lanjut di bidang AI dan web development. " +
-    "Informasi penting = link CV Kenny adalah https://tinyurl.com/KennyAnagaCV . " +
+    "Informasi penting = link CV Kenny adalah https://tinyurl.com/KennyAnagaCV1 . " +
     "link Instagram kenny adalah https://www.instagram.com/kennyanaga/ . " +
     "link GitHub Kenny adalah https://github.com/Sorrecer . " +
     "link linkedin kenny adalah https://www.linkedin.com/in/kenny-anaga-376041224/ . " +
