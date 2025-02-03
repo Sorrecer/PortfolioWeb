@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #d9c2a3;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login-container {
+        background-color: #f4f0e7;
+        padding: 20px 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+      }
+
+      .login-container img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+      }
+
+      .login-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #000;
+      }
+
+      .login-container input[type="email"],
+      .login-container input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      .login-container a {
+        display: inline-block;
+        background-color: #f5ead8;
+        color: #000;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .login-container a:hover {
+        background-color: #e0d0b5;
+      }
+
+      .login-container p {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #333;
+      }
+
+      .login-container p a {
+        color: #000;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .login-container p a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <img src="https://via.placeholder.com/50" alt="User Icon" />
+      <h1>Login as Seller</h1>
+      <form>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <a
+          href="https://sites.google.com/u/0/d/1bqOOjqrpSEBozava2wAHAcb5pAH0wpnz/p/1WQQ8MSRRwOMcBMY8qmEvRNc-I1m73kKz/preview?authuser=0"
+          >Login</a
+        >
+      </form>
+      <p>Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+  </body>
+</html>
